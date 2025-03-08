@@ -1,7 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
+@import "tailwindcss";
+@config "../../../tailwind.config.js";
+
+:root {
+  /* @apply bg-bgprimary text-primary; */
+  background-color: var(--bgprimary);
+  color: var(--primary);
+  /* font-family: "Times New Roman", Times, serif, Helvetica, sans-serif; */
+  font-family: cursive;
 }
+
 html {
   scroll-behavior: smooth;
 }
