@@ -44,8 +44,8 @@ I’m passionate about solving complex challenges and delivering scalable, high-
 
 ## 📚 Education
 - **Bachelor of Science in Computer Science**  
-  Cairo University  
-  Graduated: [Year]  
+  Faculty of Computer Science and Artificial Intelligence - Cairo University 
+  Graduated: [15 July - 2024]
   Key Areas: Software Engineering, Operating Systems, Compilers, Networking, Logic Gates, Advanced Mathematics
 
 ---
