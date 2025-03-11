@@ -3,6 +3,7 @@ import Portfolio from '../views/Portfolio.vue';
 
 const router = createRouter({
     history: createWebHistory(),
+    mode: 'history',
     routes: [
         {
             path: '/',
