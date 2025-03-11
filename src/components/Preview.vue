@@ -25,8 +25,7 @@ const typeEffect = () => {
         isDeleting = false;
         wordIndex = (wordIndex + 1) % words.length;
     }
-    // setTimeout(typeEffect, isDeleting ? 100 : 200);
-    setTimeout(typeEffect, 200);
+    setTimeout(typeEffect, isDeleting ? 100 : 200);
 };
 
 onMounted(typeEffect);
@@ -40,7 +39,7 @@ onMounted(typeEffect);
         <p class="relative w-fit inline-block sm:block">
             <span class=" inline-block sm:hidden">|</span>
             {{ jobTitle }}
-            <span class="h-[10em] border-l-4 border-l-secondary" :class="{ 'caret': animateCaret }"></span>
+            <span class="h-[10em] border-l-[3px] border-l-secondary" :class="{ 'caret': animateCaret }"></span>
         </p>
     </div>
 </template>

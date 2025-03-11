@@ -20,12 +20,14 @@ onUnmounted(() => {
 });
 </script>
 <template>
-    <transition name="fade">
-        <button v-show="showButton" @click="scrollToTop()"
-            class="fixed z-50 bottom-2 right-2 bg-bgforth text-primary px-4 py-2 cursor-pointer transition-all duration-200 hover:bg-bgsecondary">
-            <i class="fa-solid fa-up-long"></i>
-        </button>
-    </transition>
+    <teleport to='body'>
+        <transition name="fade">
+            <button v-show="showButton" @click="scrollToTop()"
+                class="fixed z-50 bottom-14 right-2 bg-bgforth text-primary px-4 py-2 cursor-pointer transition-all duration-200 hover:bg-bgsecondary">
+                <i class="fa-solid fa-up-long"></i>
+            </button>
+        </transition>
+    </teleport>
 </template>
 <style scoped>
 .fade-enter-from,

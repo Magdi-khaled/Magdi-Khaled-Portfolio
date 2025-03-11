@@ -19,27 +19,28 @@ import cppLogo from '../assets/media/skills/cpp.png';
 import csharpLogo from '../assets/media/skills/c-sharp.png';
 import gitLogo from '../assets/media/skills/git.png';
 import figmaLogo from '../assets/media/skills/figma.png';
+import { reactive } from 'vue';
 
-export const skills = [
-    { label: 'html5 & css3', icon: htmlcssLogo },
-    { label: 'javaScript', icon: JavaScriptLogo, },
-    { label: 'Vue.js', icon: vuejsLogo },
-    { label: 'vuex', icon: vuexLogo },
-    { label: 'pinia', icon: piniaLogo },
-    { label: 'nuxt.js', icon: nuxtjsLogo },
-    { label: 'typeScript', icon: typescriptLogo, },
-    { label: 'tailwind Css', icon: tailwindLogo },
-    { label: 'bootstrap', icon: bootstrapLogo },
-    { label: 'sass', icon: sassLogo },
-    { label: 'jQuery', icon: jQueryLogo, },
-    { label: 'ajax', icon: ajaxLogo, },
-    { label: 'node.js', icon: nodejsLogo },
-    { label: 'express.js', icon: expressjsLogo },
-    { label: 'mongoDB', icon: mongoLogo },
-    { label: 'git & gitHub', icon: gitLogo },
-    { label: 'figma', icon: figmaLogo },
-    { label: 'cpp', icon: cppLogo },
-    { label: 'c-sharp/ c#', icon: csharpLogo },
-    { label: 'java', icon: javaLogo },
-    { label: 'python', icon: pythonLogo }
-];
+export const skills = reactive([
+    { label: 'html5 & css3', icon: htmlcssLogo, clicked: false },
+    { label: 'javaScript', icon: JavaScriptLogo, clicked: false },
+    { label: 'Vue.js', icon: vuejsLogo, clicked: false },
+    { label: 'vuex', icon: vuexLogo, clicked: false },
+    { label: 'pinia', icon: piniaLogo, clicked: false },
+    { label: 'nuxt.js', icon: nuxtjsLogo, clicked: false },
+    { label: 'typeScript', icon: typescriptLogo, clicked: false },
+    { label: 'tailwind Css', icon: tailwindLogo, clicked: false },
+    { label: 'bootstrap', icon: bootstrapLogo, clicked: false },
+    { label: 'sass', icon: sassLogo, clicked: false },
+    { label: 'jQuery', icon: jQueryLogo, clicked: false },
+    { label: 'ajax', icon: ajaxLogo, clicked: false },
+    { label: 'node.js', icon: nodejsLogo, clicked: false },
+    { label: 'express.js', icon: expressjsLogo, clicked: false },
+    { label: 'mongoDB', icon: mongoLogo, clicked: false },
+    { label: 'git & gitHub', icon: gitLogo, clicked: false },
+    { label: 'figma', icon: figmaLogo, clicked: false },
+    { label: 'cpp', icon: cppLogo, clicked: false },
+    { label: 'c-sharp/ c#', icon: csharpLogo, clicked: false },
+    { label: 'java', icon: javaLogo, clicked: false },
+    { label: 'python', icon: pythonLogo, clicked: false }
+]);

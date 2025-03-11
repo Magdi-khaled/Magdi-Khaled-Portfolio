@@ -14,24 +14,25 @@ defineProps({
             before:absolute before:w-5 before:h-5 before:rounded-full before:bg-secondary before:shadow-lg before:shadow-bgthird before:border-2
             before:border-third before:left-[0%] before:top-[3%]">
         <div class="relative flex flex-wrap justify-between items-center">
-            <h1 class="w-full sm:w-fit capitalize font-bold my-1 first-letter:text-secondary">{{ experience.company }}
+            <h1 data-aos="fade-up" class="w-full sm:w-fit capitalize font-bold my-1 first-letter:text-secondary">{{
+                experience.company }}
             </h1>
             <h3
-                class="block lg:hidden w-full sm:w-fit text-end capitalize font-medium text-muted text-sm whitespace-nowrap">
+                class="block lg:hidden w-full sm:w-fit text-end capitalize font-medium text-primary opacity-60 text-sm whitespace-nowrap">
                 {{ experience.date }}</h3>
-            <span class="w-48 left-[-50%] xl:left-[-39%] whitespace-nowrap hidden lg:block absolute top-0.5 bg-third px-4 py-1 capitalize
+            <span data-aos="fade-left" class="w-48 left-[-50%] xl:left-[-39%] whitespace-nowrap hidden lg:block absolute top-0.5 bg-third px-4 py-1 capitalize
                 font-bold first-letter:text-secondary text-sm z-10 after:size-5 after:bg-third after:absolute after:top-[16%]
                 after:right-[-5%] after:rotate-[45deg]">
                 {{ experience.date }}</span>
         </div>
-        <div class="flex flex-wrap justify-between items-center">
+        <div data-aos="fade-up" class="flex flex-wrap justify-between items-center">
             <h1 class="w-full sm:w-fit capitalize font-bold my-1 first-letter:text-secondary">{{ experience.title }}
             </h1>
-            <i
-                class="w-full sm:w-fit text-end font-medium text-primary opacity-70 text-sm sm:text-md whitespace-nowrap">
-                {{ experience.location }}</i>
+            <h3
+                class="w-full sm:w-fit text-end font-medium text-primary opacity-60 text-sm sm:text-md whitespace-nowrap">
+                {{ experience.location }}</h3>
         </div>
-        <p class="text-sm sm:text-md mt-1">
+        <p data-aos="fade-up" class="text-sm sm:text-md mt-1">
             {{ experience.description }}
         </p>
     </div>

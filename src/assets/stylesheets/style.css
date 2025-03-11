@@ -2,13 +2,55 @@
 @config "../../../tailwind.config.js";
 
 :root {
-  /* @apply bg-bgprimary text-primary; */
-  background-color: var(--bgprimary);
-  color: var(--primary);
-  /* font-family: "Times New Roman", Times, serif, Helvetica, sans-serif; */
-  font-family: cursive;
+  @apply bg-bgprimary text-primary font-[cursive];
+}
+@media (max-width: 536px) {
+  :root {
+    font-family: "Times New Roman", Times, serif, Helvetica, sans-serif;
+  }
 }
 
 html {
-  scroll-behavior: smooth;
+  @apply scroll-smooth;
+}
+
+.fade-preview-enter-from,
+.fade-preview-leave-to {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.fade-preview-enter-to,
+.fade-preview-leave-from {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-preview-enter-active,
+.fade-preview-leave-active {
+  transition: opacity 1s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.animate__flipOutX {
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#preview {
+  @apply bg-bgprimary fixed z-[100] inset-0;
+}
+.previewAnimateClass::after {
+  @apply content-[''] absolute bg-bgthird w-full h-full top-0 left-[-100%];
+  animation: previewAnimate 2s ease-in-out forwards;
+}
+
+@keyframes previewAnimate {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
 }

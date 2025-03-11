@@ -1,3 +1,19 @@
+.highlighAnimate {
+  animation: highlight 2s ease-in-out infinite alternate;
+}
+
+@keyframes highlight {
+  0% {
+    box-shadow: 2px 5px 12px var(--secondary);
+  }
+  50% {
+    box-shadow: 2px 5px 16px var(--bgforth);
+  }
+  100% {
+    box-shadow: 2px 5px 12px var(--primary);
+  }
+}
+
 .about p span {
   color: var(--secondary);
 }
@@ -6,10 +22,11 @@
 :deep(.swiper-button-next) {
   position: absolute;
   top: 60%;
-  width: 25px;
-  height: 25px;
-  font-size: small;
-  background-color: rgba(180, 180, 180, 0.721);
+  width: 2rem;
+  height: 2rem;
+  font-size: medium;
+  font-weight: bolder;
+  background-color: rgb(160, 159, 159);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -27,7 +27,7 @@ export const projects = [
         desc: `E-Scooter product and it's features could include detailed descriptions 
                 of each model, highlighting aspects such as motor power, battery life, top speed, and unique functionalities 
                 dual motors or smart connectivity.`,
-        src: 'https://e-scooter-jkvutjhe1-magdi-khaleds-projects.vercel.app',
+        src: 'https://e-scooter-mu.vercel.app/',
         logo: escooterLogo,
         isDeployed: true
     },

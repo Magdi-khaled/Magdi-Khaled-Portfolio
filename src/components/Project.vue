@@ -14,12 +14,14 @@ let hovered = ref(null);
     <!-- <div class="card relative w-full h-[12em] md:h-[15em] lg:h-[20em] bg-bgsecondary rounded-md p-2 cursor-pointer  -->
     <div class="relative text-center w-full h-[21em] bg-bgsecondary shadow-md shadow-sec rounded-md p-2 cursor-pointer 
     transition-all duration-300" @mouseover="hovered = project.name" @mouseleave="hovered = null">
-        <img class="w-full h-[8em] border-2 border-secondary rounded" :src="project.logo"
+        <img data-aos-easing="ease-in-out" data-aos-duration="1000" loading="lazy"
+            class="w-full h-[8em] border-2 border-secondary rounded" :src="project.logo"
             :class="{ 'p-4': project.name === 'Darba - دَربْ' }" :alt="project.name">
-        <h1
+        <h1 data-aos="fade-left" data-aos-easing="ease-in-out" data-aos-duration="1000"
             class="capitalize whitespace-nowrap text-md md:text-xl lg:text-[18px] font-semibold my-2 px-2 first-letter:text-secondary">
             {{ project.name }}</h1>
-        <p class="px-2 first-letter:text-secondary text-start text-sm text-ellipsis h-[10em] overflow-hidden">
+        <p data-aos="fade-up"
+            class="px-2 first-letter:text-secondary text-start text-sm text-ellipsis h-[10em] overflow-hidden">
             {{ project.desc }}</p>
         <transition name="fade">
             <div v-show="hovered"

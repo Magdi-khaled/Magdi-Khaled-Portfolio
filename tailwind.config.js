@@ -18,12 +18,15 @@ module.exports = {
     },
     plugins: [
         function ({ addBase, theme }) {
+            // for allowing => var(--property)
             addBase({
                 ":root": {
                     "--font-display": theme('sans,serif'),
                     "--primary": theme("colors.primary"),
                     "--secondary": theme("colors.secondary"),
                     "--bgprimary": theme("colors.bgprimary"),
+                    "--bgsecondary": theme("colors.muted"),
+                    "--bgforth": theme("colors.bgforth"),
                 },
             });
         },],
