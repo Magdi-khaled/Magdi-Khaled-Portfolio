@@ -13,7 +13,7 @@ export const useContactStore = defineStore('Contact', {
         async sendEmail() {
             this.loading = true;
             try {
-                const response = await axios.post('http://localhost:3000/api/send-email', {
+                const response = await axios.post('https://tender-organized-goldenrod.glitch.me/api/send-email', {
                     name: this.name,
                     email: this.email,
                     subject: this.subject,
