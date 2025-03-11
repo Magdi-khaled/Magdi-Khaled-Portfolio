@@ -11,8 +11,8 @@ import vuexLogo from '../assets/media/skills/vuex.png';
 import piniaLogo from '../assets/media/skills/pinia.png';
 import nodejsLogo from '../assets/media/skills/nodejs.png';
 import expressjsLogo from '../assets/media/skills/expressjs.png';
-// import mongoLogo from '../assets/media/skills/mongoDB.png';
 import ajaxLogo from '../assets/media/skills/ajax.png';
+import mongodbLogo from '../assets/media/skills/mongoDB.png';
 import pythonLogo from '../assets/media/skills/python.png';
 import javaLogo from '../assets/media/skills/java.webp';
 import cppLogo from '../assets/media/skills/cpp.png';
@@ -36,7 +36,7 @@ export const skills = reactive([
     { label: 'ajax', icon: ajaxLogo, clicked: false },
     { label: 'node.js', icon: nodejsLogo, clicked: false },
     { label: 'express.js', icon: expressjsLogo, clicked: false },
-    // { label: 'mongoDB', icon: mongoLogo, clicked: false },
+    { label: 'mongoDB', icon: mongodbLogo, clicked: false },
     { label: 'git & gitHub', icon: gitLogo, clicked: false },
     { label: 'figma', icon: figmaLogo, clicked: false },
     { label: 'cpp', icon: cppLogo, clicked: false },
