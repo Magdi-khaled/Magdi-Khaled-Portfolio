@@ -14,7 +14,7 @@
   }
 }
 
-.about p span {
+:deep(.about p span) {
   color: var(--secondary);
 }
 

@@ -4,6 +4,7 @@ import BaseButton from '../components/BaseButton.vue';
 import SendButton from '../components/SendButton.vue';
 import Preview from '../components/Preview.vue';
 import Social from '../components/Social.vue';
+import About from '../components/About.vue';
 // import BaseModal from '../components/Resume.vue';
 import Skill from '../components/Skill.vue';
 import Project from '../components/Project.vue';
@@ -11,8 +12,9 @@ import Process from '../components/Process.vue';
 import Experience from '../components/Experience.vue';
 import Footer from '../components/Footer.vue';
 import Field from '../components/Field.vue';
-import GoTop from '../components/GoTop.vue';
+import Contact from '../components/Contact.vue';
 import BaseTeleport from '../components/Teleport.vue';
+import GoTop from '../components/GoTop.vue';
 
 import { ref, toRef } from "vue";
 import { skills } from '../composables/skills';
@@ -41,7 +43,7 @@ const { handleSubmit, resetForm } = useForm({
 
 const contactStore = useContactStore();
 const modules = [Navigation, Mousewheel, Scrollbar, Autoplay];
-const resumeUrl = "https://drive.google.com/file/d/1WmOGUugo7dnjbAIJHp9dVstyoJruVFPk/view?usp=sharing";
+const resumeUrl = "https://drive.google.com/file/d/1dwW8yLZ0CKggO8LHGxWaRx0M5WXlO-mT/view?usp=sharing";
 
 const mouseWheelResponsive = ref(window.innerWidth > 768);
 
@@ -73,6 +75,8 @@ const sendMessage = handleSubmit(async () => {
     }
     catch (error) {
         console.error('Error While Sending Email', error);
+        failed.value = true;
+        setTimeout(() => { failed.value = false; }, 2000);
     }
 });
 const openResume = () => {
@@ -124,27 +128,7 @@ const openResume = () => {
         <!-- about -->
         <section data-aos="fade-up" data-aos-delay="3000" class="about py-6 sm:py-8">
             <h1 class="text-2xl sm:text-4xl capitalize font-bold pb-8">about</h1>
-            <div class="flex gap-4">
-                <span class="w-[4em] h-4 border-b-2 border-b-secondary hidden sm:block"></span>
-                <p class="w-full sm:w-11/12 text-sm sm:text-lg">
-                    I'm <span>Magdi Khaled</span>, Fresh Graduate with around <span>2 years</span> of experience
-                    designing and developing responsive, user-centric web applications. Proficient in modern front-end
-                    frameworks like <span>Vue.js, Nuxt.js and Tailwind CSS</span>, along with solid
-                    back-end knowledge. <br>
-                    Passionate about solving problems, collaborating in teams, and delivering scalable, high-performance
-                    solutions to meet business goals. <br>
-                    I have a <span>Bachelor's degree in Computer Science</span> from <span>Cairo University</span>,
-                    where I developed a strong foundation in <span class="capitalize"> programming, software
-                        engineering, operating
-                        systems, compiliers, logic gates, networking basics and advanced
-                        mathematics</span>. My passion lies in solving complex problems and crafting innovative
-                    solutions that make an impact.
-
-                    With experience in <span>Full-stack Web Development</span>, I thrive on bridging the gap between
-                    design and functionality. My collaborative mindset and problem-solving skills allow me to deliver
-                    high-quality results, whether working independently or as part of a team. <br>
-                </p>
-            </div>
+            <About />
         </section>
         <span id="skills"></span>
         <hr class="border-secondary border-b">
@@ -158,8 +142,9 @@ const openResume = () => {
             </div>
             <div class="pl-0 sm:pl-6 lg:hidden">
                 <swiper :modules="modules" :breakpoints="{
-                    368: { slidesPerView: 2.1, spaceBetween: 10 },
-                    468: { slidesPerView: 2.5, spaceBetween: 10 },
+                    368: { slidesPerView: 2, spaceBetween: 10 },
+                    410: { slidesPerView: 2.2, spaceBetween: 10 },
+                    450: { slidesPerView: 2.5, spaceBetween: 10 },
                     568: { slidesPerView: 3, spaceBetween: 10 },
                     620: { slidesPerView: 3.5, spaceBetween: 10 },
                     672: { slidesPerView: 4, spaceBetween: 10 },
@@ -175,27 +160,11 @@ const openResume = () => {
                 </swiper>
             </div>
         </section>
-        <hr class="border-secondary border-b">
-        <span id="process"></span>
-        <!-- process -->
-        <section data-aos="fade-up" class="py-6 sm:py-8">
-            <h1 class="text-2xl sm:text-4xl capitalize font-bold pb-8 text-center">MY 4 STEPS CREATIVE PROCESS</h1>
-            <div class="w-full flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-6">
-                <div v-for="(item, index) in processes" :key="index" class="w-[85%] md:w-[48%] lg:w-[22%]">
-                    <Process :process="item" />
-                </div>
-            </div>
-        </section>
         <span id="projects"></span>
         <hr class="border-secondary border-b">
         <!-- projects -->
         <section data-aos="fade-up" class="py-6 sm:py-8">
             <h1 class="text-2xl sm:text-4xl capitalize font-bold text-center">my projects</h1>
-            <!-- <div class="hidden lg:flex flex-wrap gap-2 justify-center">
-                <div v-for="(item, index) in projects" :key="index" class="w-[30%] lg:w-[19.5%]">
-                    <Project :project="item" class="my-8 " />
-                </div>
-            </div> -->
             <div class="flex gap-3 justify-center">
                 <swiper :modules="modules" :breakpoints="{
                     368: { slidesPerView: 1.4, spaceBetween: 10 },
@@ -208,6 +177,17 @@ const openResume = () => {
                         <Project :project="item" class="my-12" />
                     </swiper-slide>
                 </swiper>
+            </div>
+        </section>
+        <hr class="border-secondary border-b">
+        <span id="process"></span>
+        <!-- process -->
+        <section data-aos="fade-up" class="py-6 sm:py-8">
+            <h1 class="text-2xl sm:text-4xl capitalize font-bold pb-8 text-center">MY 4 STEPS CREATIVE PROCESS</h1>
+            <div class="w-full flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-6">
+                <div v-for="(item, index) in processes" :key="index" class="w-[85%] md:w-[48%] lg:w-[22%]">
+                    <Process :process="item" />
+                </div>
             </div>
         </section>
         <span id="experience"></span>
@@ -258,6 +238,7 @@ const openResume = () => {
                     <img class="" src="../assets/media/contact/contact.png" alt="" loading="lazy">
                 </div>
             </div>
+            <Contact />
         </section>
         <GoTop />
     </body>

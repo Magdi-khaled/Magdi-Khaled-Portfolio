@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import Button from '../components/SendButton.vue';
 
 defineProps({
     project: {
@@ -11,7 +12,6 @@ let hovered = ref(null);
 </script>
 
 <template>
-    <!-- <div class="card relative w-full h-[12em] md:h-[15em] lg:h-[20em] bg-bgsecondary rounded-md p-2 cursor-pointer  -->
     <div class="relative text-center w-full h-[21em] bg-bgsecondary shadow-md shadow-sec rounded-md p-2 cursor-pointer 
     transition-all duration-300" @mouseover="hovered = project.name" @mouseleave="hovered = null">
         <img data-aos-easing="ease-in-out" data-aos-duration="1000" loading="lazy"
@@ -24,16 +24,18 @@ let hovered = ref(null);
             class="px-2 first-letter:text-secondary text-start text-sm text-ellipsis h-[10em] overflow-hidden">
             {{ project.desc }}</p>
         <transition name="fade">
-            <div v-show="hovered"
-                class="hover absolute inset-0 w-full flex rounded-lg bg-[#000000aa] transition-all duration-300">
-                <a :href="project.src" class="w-full h-full flex justify-center items-center">
-                    <p v-if="project.isDeployed" class="text-xl capitalize font-semibold">
+            <div v-show="hovered" class="hover absolute inset-0 w-full rounded-lg bg-[#000000aa] transition-all duration-300 
+                flex flex-col justify-center items-center px-4">
+                <Button v-if="project.isDeployed">
+                    <a :href="project.src" class="">
                         Live Demo <i class="fa-solid fa-link"></i>
-                    </p>
-                    <p v-else class="text-xl capitalize font-semibold">
-                        Source Code <i class="fa-solid fa-link"></i>
-                    </p>
-                </a>
+                    </a>
+                </Button>
+                <Button>
+                    <a :href="project.src" class="">
+                        Source Code <i class="fa-solid fa-code"></i>
+                    </a>
+                </Button>
             </div>
         </transition>
     </div>
