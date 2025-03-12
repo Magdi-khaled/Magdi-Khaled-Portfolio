@@ -2,7 +2,7 @@
 export const experiences = [
     {
         title: 'Web Developer Intern',
-        company: 'SGT Company',
+        company: 'RMS Company',
         description: `
             Developed responsive interfaces for 10+ projects, leveraging Vue.js, Tailwind CSS, and JavaScript,
                 improving user engagement metrics by 20%.
