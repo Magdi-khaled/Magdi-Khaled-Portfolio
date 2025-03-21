@@ -32,7 +32,7 @@ let hovered = ref(null);
                     </a>
                 </Button>
                 <Button>
-                    <a :href="project.src" class="">
+                    <a :href="project.src_code" class="">
                         Source Code <i class="fa-solid fa-code"></i>
                     </a>
                 </Button>

@@ -9,7 +9,7 @@ router.beforeEach((to, from, next) => {
   if (to.path === '/portfolio' && showPreview.value) {
     setTimeout(() => {
       showPreview.value = false;
-    }, 3000);
+    }, 1500);
   }
   next();
 });
