@@ -1,59 +1,89 @@
-# Magdi Khaled's Portfolio
+# Magdi Khaled Kelany
 
-Welcome to my portfolio repository! 🚀 This space highlights my expertise, projects, and journey as a **Frontend Developer | Software Engineer**, blending creativity with technical precision to build impactful web solutions.
+Welcome to my GitHub profile! 🚀 I’m a passionate **Frontend Developer | Software Engineer** with a focus on building responsive, user-centric web applications. With ~2 years of experience and a Bachelor’s degree in Computer Science from Cairo University, I blend technical precision with creative problem-solving to deliver scalable, high-impact solutions.
+
+<p align="center">
+  <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" alt="Coding Animation" width="300"/>
+</p>
 
 ---
 
 ## 📌 About Me
 
-Hello! I’m **Magdi Khaled**, a fresh graduate with approximately **2 years of experience** crafting responsive, user-focused web applications. I specialize in modern front-end frameworks like **Vue.js**, **Nuxt.js**, and **Tailwind CSS**, complemented by a solid foundation in back-end development. With a **Bachelor’s degree in Computer Science** from **Cairo University**, I’ve honed a deep understanding of programming, software engineering principles, operating systems, compilers, logic gates, networking fundamentals, and advanced mathematics.
+I’m **Magdi Khaled Kelany**, a fresh graduate and skilled developer based in Giza, Egypt. My journey in tech spans front-end mastery with tools like **Vue.js**, **Nuxt.js**, and **Tailwind CSS**, alongside solid back-end expertise in **Node.js**, **Express.js**, and **Java Spring Boot**. I thrive on tackling complex challenges, collaborating with teams, and optimizing performance to meet business goals.
 
-I’m passionate about solving complex challenges and delivering scalable, high-performance solutions that align with business objectives. My experience in full-stack web development enables me to bridge design and functionality seamlessly. Whether working solo or collaborating in a team, I bring a problem-solving mindset, a commitment to quality, and a drive to innovate.
+My foundation in computer science—covering algorithms, data structures, software engineering, and more—fuels my ability to craft innovative solutions. Whether it’s streamlining educational platforms or designing e-commerce systems, I’m driven to bridge design and functionality seamlessly.
 
 ---
 
 ## 🎯 Skills
 
 ### Languages
-- **HTML5**, **CSS3**, **Sass**
-- **JavaScript**, **jQuery**, **Ajax**, **TypeScript**
-- **Python**, **C#**, **C++**, **Java**
+
+<p>
+  <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/Sass-%23CC6699.svg?style=for-the-badge&logo=sass&logoColor=white" alt="Sass"/>
+  <img src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#"/>
+  <img src="https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++"/>
+  <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" alt="Java"/>
+</p>
 
 ### Technologies & Frameworks
-- **Front-End**: Vue.js, Vuex, Pinia, Nuxt.js, Tailwind CSS, Bootstrap
-- **Back-End**: Node.js, Express.js, RESTful APIs, Spring Boot
-- **Tools**: Figma, Git/GitHub, Webpack, Socket.io
+
+<p>
+  <img src="https://img.shields.io/badge/Vue.js-%234FC08D.svg?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue.js"/>
+  <img src="https://img.shields.io/badge/Nuxt.js-%2300C58E.svg?style=for-the-badge&logo=nuxt.js&logoColor=white" alt="Nuxt.js"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"/>
+  <img src="https://img.shields.io/badge/Bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
+  <img src="https://img.shields.io/badge/Node.js-%23339933.svg?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/Express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=white" alt="Express.js"/>
+  <img src="https://img.shields.io/badge/Spring_Boot-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="Spring Boot"/>
+</p>
 
 ### Database Management
-- MongoDB, PostgreSQL, Microsoft SQL Server, MySQL
 
-### Soft Skills
-- Teamwork & Collaboration
-- Problem-Solving
-- Self-Learning & Adaptability
+<p>
+  <img src="https://img.shields.io/badge/MongoDB-%2347A248.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-%23336791.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
+</p>
 
----
+### Tools
 
-## 🌟 Dev-Processes
-- **Technical Proficiency**: Skilled in building responsive, performant web applications with modern tools and frameworks.
-- **Full-Stack Perspective**: Capable of integrating front-end interfaces with robust back-end systems.
-- **Problem-Solving Passion**: Thrive on tackling challenges and delivering innovative, user-centric solutions.
-- **Collaborative Spirit**: Effective in team settings, with a focus on clear communication and shared success.
+<p>
+  <img src="https://img.shields.io/badge/Figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"/>
+  <img src="https://img.shields.io/badge/Git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+  <img src="https://img.shields.io/badge/GitHub-%23181717.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  <img src="https://img.shields.io/badge/Webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black" alt="Webpack"/>
+</p>
 
----
+### Skill Proficiency (Chart Simulation)
 
-## 📚 Education
-- **Bachelor of Science in Computer Science**  
-  Faculty of Computer Science and Artificial Intelligence - Cairo University 
-  Graduated: [15 July - 2024]
-  Key Areas: Software Engineering, Operating Systems, Compilers, Networking, Logic Gates, Advanced Mathematics
+- **Vue.js**: ![Vue.js Skill](https://progress-bar.dev/90/?title=Vue.js)
+- **JavaScript**: ![JavaScript Skill](https://progress-bar.dev/85/?title=JavaScript)
+- **Tailwind CSS**: ![Tailwind Skill](https://progress-bar.dev/80/?title=Tailwind_CSS)
+- **Node.js**: ![Node.js Skill](https://progress-bar.dev/75/?title=Node.js)
+- **Problem-Solving**: ![Problem-Solving Skill](https://progress-bar.dev/95/?title=Problem-Solving)
 
 ---
 
 ## 📬 Get in Touch
-I’m always open to collaboration, feedback, or new opportunities. Feel free to connect:
-- **Email**: [magdikhaled23s@gmail.com]  
-- **LinkedIn**: [https://www.linkedin.com/in/magdi-khaled-2b1b61206/]  
-- **GitHub**: [https://github.com/Magdi-khaled]  
 
-Thanks for visiting—let’s build something amazing together! ✨
+Let’s connect for collaboration or opportunities!
+
+- **Email**: [magdikhaled23s@gmail.com](mailto:magdikhaled23s@gmail.com)
+- **Phone**: +20 112 236 8948
+- **LinkedIn**: [linkedin.com/in/magdi-khaled](https://linkedin.com/in/magdi-khaled)
+- **GitHub**: [github.com/MagdiKhaled1](https://github.com/MagdiKhaled1)
+- **Portfolio**: [magdi-khaled-portfolio.vercel.app](https://magdi-khaled-portfolio.vercel.app)
+- **Codeforces**: [codeforces.com/profile/MagdiKhaled1](https://codeforces.com/profile/MagdiKhaled1)
+
+<p align="center">
+  <img src="https://media.giphy.com/media/3o7TKTDn976rzVgky4/giphy.gif" alt="Handshake Animation" width="200"/>
+</p>
+
+Thanks for stopping by—let’s create something extraordinary together! ✨
