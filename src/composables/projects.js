@@ -19,7 +19,8 @@ export const projects = [
     {
         name: 'E-commerce - Ystore',
         desc: `Online Fashion store that view sellers’ fashion products for sell.
-                Admin can add or update products for sell. User can view his Orders, returns, Pay Cards, Monthly discount QRCode and order any product.`,
+                Admin can add or update products for sell. User can view his Orders, 
+                returns, Pay Cards, Monthly discount QRCode and order any product.`,
         src: 'https://ystore-fashion.netlify.app',
         src_code: 'https://github.com/Magdi-khaled/E-commerce-Ystore',
         logo: ystoreLogo,

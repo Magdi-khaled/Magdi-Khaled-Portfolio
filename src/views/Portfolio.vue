@@ -96,7 +96,7 @@ const openResume = () => {
             <div data-aos="fade-right" data-aos-delay="1500"
                 class="relative w-full md:w-7/12 lg:w-6/12 text-md sm:text-3xl md:text-4xl capitalize flex flex-wrap items-center">
                 <div class="w-full py-0 md:py-12 leading-10 sm:leading-14 h-fit md:h-[8em]">
-                    <img class="block md:hidden w-[6.5em] mb-4 border-2 rounded-full grayscale-[0.3] highlighAnimate"
+                    <img class="block md:hidden w-[7.5em] mb-4 border-2 rounded-full grayscale-[0.35] highlighAnimate"
                         src="../assets/media/personal-img.png" alt="personal-img" loading="lazy">
                     <Preview />
                 </div>
@@ -115,7 +115,7 @@ const openResume = () => {
             <div class="w-5/12 lg:w-6/12 hidden md:flex justify-end items-center">
                 <div data-aos="fade-left" data-aos-delay="1500" class="relative flex justify-end">
                     <!-- Personal Image -->
-                    <img class="w-[30em] lg:w-[25em] border-l-2 rounded-l-full shadow-2xl grayscale-[0.3] highlighAnimate"
+                    <img class="w-[30em] lg:w-[25em] border-l-2 rounded-l-full shadow-2xl grayscale-[0.35] highlighAnimate"
                         src="../assets/media/personal-img.png" alt="personal-img" loading="lazy">
                     <!-- Social Links -->
                     <Social />
