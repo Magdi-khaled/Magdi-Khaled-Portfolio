@@ -43,7 +43,7 @@ const { handleSubmit, resetForm } = useForm({
 
 const contactStore = useContactStore();
 const modules = [Navigation, Mousewheel, Scrollbar, Autoplay];
-const resumeUrl = "https://drive.google.com/file/d/1dwW8yLZ0CKggO8LHGxWaRx0M5WXlO-mT/view?usp=sharing";
+const resumeUrl = "https://drive.google.com/file/d/1bceCJ3nLJ_TW-h8XZnuYkLIwwSptWZZG/view";
 
 const mouseWheelResponsive = ref(window.innerWidth > 768);
 

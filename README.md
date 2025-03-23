@@ -1,18 +1,14 @@
-# Magdi Khaled Kelany
+# Magdi Khaled's Portfolio
 
-Welcome to my GitHub profile! 🚀 I’m a passionate **Frontend Developer | Software Engineer** with a focus on building responsive, user-centric web applications. With ~2 years of experience and a Bachelor’s degree in Computer Science from Cairo University, I blend technical precision with creative problem-solving to deliver scalable, high-impact solutions.
-
-<p align="center">
-  <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" alt="Coding Animation" width="300"/>
-</p>
+Welcome to my portfolio repository! 🚀 This space highlights my expertise, projects, and journey as a **Frontend Developer | Software Engineer**, blending creativity with technical precision to build impactful web solutions.
 
 ---
 
 ## 📌 About Me
 
-I’m **Magdi Khaled Kelany**, a fresh graduate and skilled developer based in Giza, Egypt. My journey in tech spans front-end mastery with tools like **Vue.js**, **Nuxt.js**, and **Tailwind CSS**, alongside solid back-end expertise in **Node.js**, **Express.js**, and **Java Spring Boot**. I thrive on tackling complex challenges, collaborating with teams, and optimizing performance to meet business goals.
+- Hello! I’m **Magdi Khaled**, a fresh graduate with approximately **2 years of experience** crafting responsive, user-focused web applications. I specialize in modern front-end frameworks like **Vue.js**, **Nuxt.js**, and **Tailwind CSS**, complemented by a solid foundation in back-end development. With a **Bachelor’s degree in Computer Science** from **Cairo University**, I’ve honed a deep understanding of programming, software engineering principles, operating systems, compilers, logic gates, networking fundamentals, and advanced mathematics.
 
-My foundation in computer science—covering algorithms, data structures, software engineering, and more—fuels my ability to craft innovative solutions. Whether it’s streamlining educational platforms or designing e-commerce systems, I’m driven to bridge design and functionality seamlessly.
+- I’m passionate about solving complex challenges and delivering scalable, high-performance solutions that align with business objectives. My experience in full-stack web development enables me to bridge design and functionality seamlessly. Whether working solo or collaborating in a team, I bring a problem-solving mindset, a commitment to quality, and a drive to innovate.
 
 ---
 
@@ -61,15 +57,21 @@ My foundation in computer science—covering algorithms, data structures, softwa
   <img src="https://img.shields.io/badge/Webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black" alt="Webpack"/>
 </p>
 
-### Skill Proficiency (Chart Simulation)
+### Skill Proficiency
 
-- **Vue.js**: ![Vue.js Skill](https://progress-bar.dev/90/?title=Vue.js)
-- **JavaScript**: ![JavaScript Skill](https://progress-bar.dev/85/?title=JavaScript)
-- **Tailwind CSS**: ![Tailwind Skill](https://progress-bar.dev/80/?title=Tailwind_CSS)
-- **Node.js**: ![Node.js Skill](https://progress-bar.dev/75/?title=Node.js)
-- **Problem-Solving**: ![Problem-Solving Skill](https://progress-bar.dev/95/?title=Problem-Solving)
-
----
+- ![Vue.js](https://img.shields.io/badge/Vue.js-97%25-brightgreen?style=flat)
+  ![Nuxt.js](https://img.shields.io/badge/Nuxt.js-94%25-brightgreen?style=flat)
+  ![JavaScript](https://img.shields.io/badge/JavaScript-96%25-brightgreen?style=flat)
+  ![TypeScript](https://img.shields.io/badge/TypeScript-94%25-brightgreen?style=flat)
+- ![Html5](https://img.shields.io/badge/Html5-98%25-blue?style=flat)
+  ![Css3](https://img.shields.io/badge/CSS-98%25-blue?style=flat)
+  ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-97%25-blue?style=flat)
+  ![Bootstrap](https://img.shields.io/badge/Bootstrap-95%25-blue?style=flat)
+  ![Sass](https://img.shields.io/badge/Sass-94%25-blue?style=flat)
+- ![Node.js](https://img.shields.io/badge/Node.js-95%25-green?style=flat)
+  ![Express.js](https://img.shields.io/badge/Express.js-92%25-green?style=flat)
+  ![MongoDB](https://img.shields.io/badge/MongoDB-92%25-brightgreen?style=flat)
+  ![Figma](https://img.shields.io/badge/Figma-91%25-brightgreen?style=flat)
 
 ## 📬 Get in Touch
 
@@ -81,9 +83,5 @@ Let’s connect for collaboration or opportunities!
 - **GitHub**: [github.com/MagdiKhaled1](https://github.com/MagdiKhaled1)
 - **Portfolio**: [magdi-khaled-portfolio.vercel.app](https://magdi-khaled-portfolio.vercel.app)
 - **Codeforces**: [codeforces.com/profile/MagdiKhaled1](https://codeforces.com/profile/MagdiKhaled1)
-
-<p align="center">
-  <img src="https://media.giphy.com/media/3o7TKTDn976rzVgky4/giphy.gif" alt="Handshake Animation" width="200"/>
-</p>
 
 Thanks for stopping by—let’s create something extraordinary together! ✨
