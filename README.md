@@ -78,10 +78,12 @@ Welcome to my portfolio repository! 🚀 This space highlights my expertise, pro
 Let’s connect for collaboration or opportunities!
 
 - **Email**: [magdikhaled23s@gmail.com](mailto:magdikhaled23s@gmail.com)
-- **Phone**: +20 112 236 8948
-- **LinkedIn**: [linkedin.com/in/magdi-khaled](https://linkedin.com/in/magdi-khaled)
-- **GitHub**: [github.com/MagdiKhaled1](https://github.com/MagdiKhaled1)
+- **Whatsapp**: [https://wa.me/201122368948](https://wa.me/201122368948)
+- **LinkedIn**: [linkedin.com/in/magdi-khaled](https://www.linkedin.com/in/magdi-khaled-2b1b61206/)
+- **GitHub**: [github.com/MagdiKhaled1](https://github.com/Magdi-khaled)
 - **Portfolio**: [magdi-khaled-portfolio.vercel.app](https://magdi-khaled-portfolio.vercel.app)
 - **Codeforces**: [codeforces.com/profile/MagdiKhaled1](https://codeforces.com/profile/MagdiKhaled1)
+
+---
 
 Thanks for stopping by—let’s create something extraordinary together! ✨

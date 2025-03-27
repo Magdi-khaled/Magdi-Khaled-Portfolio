@@ -7,7 +7,7 @@ const props = defineProps({
         required: true
     },
 });
-const resumeUrl = "https://drive.google.com/file/d/1bceCJ3nLJ_TW-h8XZnuYkLIwwSptWZZG/view?usp=sharing";
+const resumeUrl = "https://drive.google.com/file/d/1Lslxs_daHwEPQI5bm_bJveaxLDoUpfqI/view";
 
 </script>
 
