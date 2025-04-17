@@ -8,18 +8,12 @@ import router from './routes/router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// Swiper Styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/mousewheel';
-import 'swiper/css/pagination';
-
 const app = createApp(App);
 const pinia = createPinia();
 
 // Call AOS
 AOS.init({
-    duration: 1000,
+    duration: 800,
     once: true,
 });
 

@@ -1,10 +1,12 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue';
+import { AkArrowUp } from '@kalimahapps/vue-icons/ak';
+import { isDarkTheme } from '@/composables/useTheme.js';
 
-let showButton = ref(window.scrollY > 300);
+const showButton = ref(window.scrollY > 300);
 
 const handleScroll = () => {
-    showButton.value = window.scrollY > 300; // Show when scrolled 200px
+    showButton.value = window.scrollY > 300;
 };
 
 const scrollToTop = () => {
@@ -22,9 +24,13 @@ onUnmounted(() => {
 <template>
     <teleport to='body'>
         <transition name="fade">
-            <button v-show="showButton" @click="scrollToTop()"
-                class="fixed z-50 bottom-14 right-2 bg-bgforth text-primary px-4 py-2 cursor-pointer transition-all duration-200 hover:bg-bgsecondary">
-                <i class="fa-solid fa-up-long"></i>
+            <button v-show="showButton" @click="scrollToTop" class="fixed z-[9] bottom-15 right-4 sm:right-8 
+                px-[0.825rem] py-[1rem] rounded-xl cursor-pointer transition-all duration-200 hover:bg-bgsecondary"
+                :class="{
+                    'bg-bg-color text-body-color hover:bg-dark-hovered': !isDarkTheme,
+                    'bg-body-color text-dark-hovered hover:bg-gray-300': isDarkTheme,
+                }">
+                <AkArrowUp />
             </button>
         </transition>
     </teleport>

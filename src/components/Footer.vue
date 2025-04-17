@@ -1,30 +1,45 @@
 <script setup>
-import { ref } from 'vue';
-const links = ref([
-    { value: 'https://github.com/Magdi-khaled', icon: 'fa-brands fa-github', title: 'GitHub' },
-    { value: 'https://www.linkedin.com/in/magdi-khaled-2b1b61206', icon: 'fa-brands fa-linkedin-in p-1', title: 'Linked In' },
-    { value: 'https://codeforces.com/profile/MagdiKhaled1', icon: 'fa-solid fa-code', title: 'Codeforces' },
-    { value: 'https://www.facebook.com/Magdi.k.s1/', icon: 'fa-brands fa-facebook', title: 'Facebook' },
-    { value: 'https://wa.me/201122368948', icon: 'fa-brands fa-whatsapp', title: 'Whatsapp' },
-]);
-</script>
+import { isDarkTheme } from '@/composables/useTheme.js';
+import { CdGithubAlt } from '@kalimahapps/vue-icons/cd';
+import { UnLinkedinAlt } from '@kalimahapps/vue-icons/un';
+import { BsInstagram } from '@kalimahapps/vue-icons/bs';
 
+const links = [
+    { value: 'https://www.linkedin.com/in/magdi-khaled-2b1b61206', icon: 'fa-brands fa-linkedin-in', title: 'Linked In' },
+    { value: 'https://github.com/Magdi-khaled', icon: 'fa-brands fa-github', title: 'GitHub' },
+    { value: 'https://www.instagram.com/magdi_khaled1t/', icon: 'fa-brands fa-facebook', title: 'Instagram' },
+];
+const sections = ['about', 'skills', 'experience', 'projects']
+
+const goto = (item) => {
+    const link = document.createElement('a');
+    link.href = item.value;
+    link.target = "_blank";
+    link.click();
+}
+</script>
 <template>
-    <footer class="flex flex-wrap justify-between items-center py-2 px-4">
-        <p class="text-primary opacity-70 text-xs sm:text-md py-2 sm:py-0">
-            &copy;Copyright 2025 by Magdi Khaled Kelany.
-        </p>
-        <ul class="w-fit flex gap-4 items-center my-2 sm:my-0">
-            <li v-for="item in links"
-                class="w-8 border border-secondary text-center rounded-full hover:bg-primary hover:text-bgprimary transform-all duration-300">
-                <a :href="item.value" class="block w-full h-full p-1" :title="item.title">
-                    <i :class="item.icon"></i>
-                </a>
-            </li>
-        </ul>
-        <div class="text-sm sm:text-md flex gap-2">
-            <p class="text-primary opacity-60">My mail id : </p>
-            <h4>magdikhaled23s@gmail.com</h4>
+    <footer class="border-t-gray-300 flex flex-col items-center gap-6"
+        :class="{ 'bg-hovered shadow-top': isDarkTheme, 'border-t-[1px]': !isDarkTheme }">
+        <p class="monoton-regular text-md py-4">
+            Magdi Khaled </p>
+        <div class="w-full flex items-center justify-center gap-4">
+            <a v-for="(item, index) in sections" :key="index" :href="`#${item}`" target="_blank"
+                class="capitalize text-sm decoration-0 hover:underline transition-all duration-300"
+                :class="{ 'text-bg-color': !isDarkTheme }">{{ item }}</a>
         </div>
+        <div class="w-fit flex gap-4 my-2">
+            <button v-for="item in links" @click="goto(item)" :title="item.title" class="size-8 sm:size-10 capitalize flex justify-center items-center
+                text-lg sm:text-xl rounded-md cursor-pointer transition-colors duration-300" :class="{
+                    'bg-primary text-body-color hover:bg-dark-hovered': !isDarkTheme,
+                    'bg-body-color text-dark-hovered border-dark-hovered hover:text-muted hover:bg-dark-hovered': isDarkTheme,
+                }">
+                <CdGithubAlt v-if="item.title === 'GitHub'" />
+                <UnLinkedinAlt v-if="item.title === 'Linked In'" />
+                <BsInstagram v-if="item.title === 'Instagram'" />
+            </button>
+        </div>
+        <p class="text-xs sm:text-md py-6 mb-12" :class="{ 'text-muted': !isDarkTheme }">
+            Copyright © Magdi 2025 </p>
     </footer>
 </template>

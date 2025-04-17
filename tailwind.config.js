@@ -4,15 +4,16 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: '#d9d9da',
-                secondary: '#ffc86b',
-                third: '#717275',
-                forth: '#8e7c5a',
-                muted: '#7a7a7a',
-                bgprimary: '#34353a',
-                bgsecondary: '#3d3e42',
-                bgthird: '#f0bf6c',
-                bgforth: '#5d5e61',
+                primary: '#333333',
+                secondary: '#757582',
+                bodyColor: '#FAFAFA',
+                bgColor: '#525252',
+                hovered: '#212020',
+                darkHovered: '#171717',
+                muted: '#828282'
+            },
+            fontFamily: {
+                sans: ['Poppins', 'sans-serif'],
             },
         },
     },
@@ -21,12 +22,14 @@ module.exports = {
             // for allowing => var(--property)
             addBase({
                 ":root": {
-                    "--font-display": theme('sans,serif'),
+                    "--font-display": theme('sans'),
                     "--primary": theme("colors.primary"),
                     "--secondary": theme("colors.secondary"),
-                    "--bgprimary": theme("colors.bgprimary"),
-                    "--bgsecondary": theme("colors.muted"),
-                    "--bgforth": theme("colors.bgforth"),
+                    "--bodyColor": theme("colors.bodyColor"),
+                    "--bgColor": theme("colors.bodyColor"),
+                    "--hovered": theme("colors.hovered"),
+                    "--darkHovered": theme("colors.darkHovered"),
+                    "--muted": theme("colors.muted"),
                 },
             });
         },],

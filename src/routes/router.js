@@ -1,5 +1,5 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Portfolio from '../views/Portfolio.vue';
+import HomeView from '@/views/HomeView.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -7,12 +7,12 @@ const router = createRouter({
     routes: [
         {
             path: '/',
-            redirect: '/portfolio'
+            redirect: '/home'
         },
         {
-            path: '/portfolio',
-            name: 'portfolio',
-            component: Portfolio,
+            path: '/home',
+            name: 'home',
+            component: HomeView,
         }
     ]
 });

@@ -1,39 +1,24 @@
 <script setup>
+import { UiDate } from '@kalimahapps/vue-icons/ui';
+import { isDarkTheme } from '@/composables/useTheme.js';
 defineProps({
-    experience: {
-        type: Object,
-        required: true
-    }
-})
-
+    experience: { type: Object, required: true },
+    order: { type: Number, required: true }
+});
 </script>
+
 <template>
-    <div class="exp min-h-[11em] px-6 sm:px-7 m-auto w-full sm:w-10/12 md:w-8/12 lg:w-6/12 relative
-            after:inset-0 after:absolute after:left-[2%] after:sm:left-[1.5%] after:top-[16%] after:sm:top-[20%] after:h-[80%] after:sm:h-[60%]
-            after:w-[0.2rem] after:rounded-[15px] after:bg-primary after:opacity-60
-            before:absolute before:w-5 before:h-5 before:rounded-full before:bg-secondary before:shadow-lg before:shadow-bgthird before:border-2
-            before:border-third before:left-[0%] before:top-[3%]">
-        <div class="relative flex flex-wrap justify-between items-center">
-            <h1 data-aos="fade-up" class="w-full sm:w-fit capitalize font-bold my-1 first-letter:text-secondary">{{
-                experience.company }}
-            </h1>
-            <h3
-                class="block lg:hidden w-full sm:w-fit text-end capitalize font-medium text-primary opacity-60 text-sm whitespace-nowrap">
-                {{ experience.date }}</h3>
-            <span data-aos="fade-left" class="w-48 left-[-50%] xl:left-[-39%] whitespace-nowrap hidden lg:block absolute top-0.5 bg-third px-4 py-1 capitalize
-                font-bold first-letter:text-secondary text-sm z-10 after:size-5 after:bg-third after:absolute after:top-[16%]
-                after:right-[-5%] after:rotate-[45deg]">
-                {{ experience.date }}</span>
+    <div :class="{ 'order-2': order % 2, 'order-0': !(order % 2) }">
+        <h1 class="font-bold my-1">
+            {{ experience.title }}
+            <span v-if="experience.company || experience.location" class="block py-1 font-medium text-sm"
+                :class="{ '': isDarkTheme, 'text-secondary': !isDarkTheme }">
+                {{ experience.company }}<span v-if="experience.location"> | {{ experience.location }}</span>
+            </span>
+        </h1>
+        <div class="flex items-center gap-2 text-xs my-1" :class="{ '': isDarkTheme, 'text-secondary': !isDarkTheme }">
+            <UiDate class="inline-block" />
+            <p class="inline">{{ experience.date }}</p>
         </div>
-        <div data-aos="fade-up" class="flex flex-wrap justify-between items-center">
-            <h1 class="w-full sm:w-fit capitalize font-bold my-1 first-letter:text-secondary">{{ experience.title }}
-            </h1>
-            <h3
-                class="w-full sm:w-fit text-end font-medium text-primary opacity-60 text-sm sm:text-md whitespace-nowrap">
-                {{ experience.location }}</h3>
-        </div>
-        <p data-aos="fade-up" class="text-sm sm:text-md mt-1">
-            {{ experience.description }}
-        </p>
     </div>
 </template>

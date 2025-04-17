@@ -1,6 +1,7 @@
 <script setup>
 import { useField } from 'vee-validate';
 import { watch } from 'vue';
+import { isDarkTheme } from '@/composables/useTheme.js';
 
 const emit = defineEmits(['update:modelValue']);
 const props = defineProps({
@@ -22,19 +23,24 @@ watch(value, (newVal) => {
 </script>
 
 <template>
-    <div class="flex flex-col gap-1">
-        <label :for="props.name" class="capitalize text-sm sm:text-md">{{ label }}</label>
+    <div class="block relative pt-3">
+        <label :for="props.name" class="absolute left-[3%] md:left-[4%] top-[4%] px-[6px] capitalize text-sm sm:text-md"
+            :class="{
+                'text-secondary bg-body-color': !isDarkTheme, 'bg-dark-hovered': isDarkTheme
+            }">{{ label }}</label>
 
         <!-- Input Field -->
         <input v-if="type !== 'textarea'" :id="props.name" :name="props.name" :type="props.type" autocomplete="off"
-            :placeholder="props.placeholder" class="px-3 lg:px-4 py-3 lg:py-4 text-xs lg:text-[14px] tracking-wide border-0 outline-0 rounded-xl bg-[#292b2c]
-            focus:bg-[#000000bc] focus:scale-[1.01] transition-all duration-200" v-model="value" />
-        <!-- Textarea Field -->
-        <textarea v-else :id="props.name" :name="props.name" :placeholder="props.placeholder" autocomplete="off" class="p-3 lg:p-4 h-[7rem] text-xs lg:text-[14px] tracking-wide border-0 outline-0
-            rounded-2xl bg-[#292b2c] focus:bg-[#000000bc] focus:scale-[1.01] transition-scale duration-200"
-            v-model="value" />
+            :placeholder="props.placeholder" class="w-full p-4 text-sm sm:text-md
+            border-[2px] outline-0 rounded-xl"
+            :class="{ 'border-gray-300': !isDarkTheme, 'border-bg-color': isDarkTheme }" v-model="value" />
 
-        <p v-if="errorMessage" class="text-red-400 text-xs font-light mt-[-2px] px-1">{{ errorMessage }}</p>
+        <!-- Textarea Field -->
+        <textarea v-else :id="props.name" :name="props.name" :placeholder="props.placeholder" autocomplete="off"
+            class="w-full p-4 h-[7rem] text-sm sm:text-md border-[2px] outline-0 rounded-xl"
+            :class="{ 'border-gray-300': !isDarkTheme, 'border-bg-color': isDarkTheme }" v-model="value" />
+
+        <p v-if="errorMessage" class="text-red-400 text-xs font-light px-1">{{ errorMessage }}</p>
     </div>
 
 </template>

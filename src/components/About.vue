@@ -1,23 +1,55 @@
-<template>
-    <div class="flex gap-4">
-        <span class="w-[4em] h-4 border-b-2 border-b-secondary hidden sm:block"></span>
-        <p class="w-full sm:w-11/12 text-sm sm:text-lg">
-            I'm <span>Magdi Khaled</span>, Fresh Graduate with around <span>2 years</span> of experience
-            designing and developing responsive, user-centric web applications. Proficient in modern front-end
-            frameworks like <span>Vue.js, Nuxt.js and Tailwind CSS</span>, along with solid
-            back-end knowledge. <br>
-            Passionate about solving problems, collaborating in teams, and delivering scalable, high-performance
-            solutions to meet business goals. <br>
-            I have a <span>Bachelor's degree in Computer Science</span> from <span>Cairo University</span>,
-            where I developed a strong foundation in <span class="capitalize"> programming, software
-                engineering, operating
-                systems, compiliers, logic gates, networking basics and advanced
-                mathematics</span>. My passion lies in solving complex problems and crafting innovative
-            solutions that make an impact.
+<script setup>
+import { CoEducation } from '@kalimahapps/vue-icons/co';
+import { BxBriefcase, BxSupport } from '@kalimahapps/vue-icons/bx';
+import BaseButton from '@/components/BaseButton.vue';
+import Resume from '@/assets/media/myResume.pdf';
+import { isDarkTheme } from '@/composables/useTheme';
 
-            With experience in <span>Full-stack Web Development</span>, I thrive on bridging the gap between
-            design and functionality. My collaborative mindset and problem-solving skills allow me to deliver
-            high-quality results, whether working independently or as part of a team. <br>
-        </p>
+const downloadResume = () => {
+    const link = document.createElement('a')
+    link.href = Resume;
+    link.download = 'Magdi Khaled\'s Resume.pdf';
+    link.click();
+};
+</script>
+<template>
+    <div class="mt-8 flex flex-col lg:flex-row gap-4 justify-between xl:justify-center items-center">
+        <div class="w-full sm:w-1/2 flex justify-center">
+            <img class="hidden sm:block rounded-3xl w-[15em] lg:w-[20em] h-[17rem] lg:h-[21em]" loading="lazy"
+                src="@/assets/media/personal-image.webp" alt="graduate-img">
+        </div>
+        <div class="w-full sm:w-10/12 md:w-8/12 lg:w-6/12 flex flex-col gap-4">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 w-full font-bold">
+                <div class="col-span-1 flex flex-col items-center gap-1 border-[1px] rounded-xl py-4 px-3"
+                    :class="{ 'bg-white border-gray-200': !isDarkTheme, 'bg-hovered border-bg-color': isDarkTheme }">
+                    <CoEducation class="text-2xl" />
+                    <h4 class="capitalize text-sm">education</h4>
+                    <p class="text-[10px] text-muted font-medium">Computer Science</p>
+                </div>
+                <div class="col-span-1 flex flex-col items-center gap-1 border-[1px] rounded-xl py-4 px-3"
+                    :class="{ 'bg-white border-gray-200': !isDarkTheme, 'bg-hovered border-bg-color': isDarkTheme }">
+                    <BxBriefcase class="text-2xl" />
+                    <h4 class="capitalize text-sm">projects</h4>
+                    <p class="text-[10px] text-muted font-medium">15+ Projects</p>
+                </div>
+                <div class="col-span-1 flex flex-col items-center gap-1 border-[1px] rounded-xl py-4 px-3"
+                    :class="{ 'bg-white border-gray-200': !isDarkTheme, 'bg-hovered border-bg-color': isDarkTheme }">
+                    <BxSupport class="text-2xl" />
+                    <h4 class="capitalize text-sm">opportunities</h4>
+                    <p class="text-[10px] text-muted font-medium">Open to Work</p>
+                </div>
+            </div>
+            <p class="my-4 text-md w-full xl-w-11/12" :class="{ 'text-secondary': !isDarkTheme }">
+                Recent graduate with a Bachelor's degree in Computer Science, with two years of experience as a
+                Front-end developer, turning ideas into seamless, interactive web experiences. I blend design and code
+                to
+                craft user-friendly interfaces that not only look great but feel intuitive. Passionate about creating
+                smooth, engaging digital journeys.
+            </p>
+            <BaseButton aria-role="link" @click="downloadResume" class="w-fit">
+                download CV
+                <img src="@/assets/media/icons/resume.svg" class="size-5 bg-white rounded-lg shadow-md" alt="">
+            </BaseButton>
+        </div>
     </div>
 </template>

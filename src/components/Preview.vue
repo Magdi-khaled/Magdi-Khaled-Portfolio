@@ -1,7 +1,8 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-const words = ["Frontend Developer", "Freelancer"];
+import { isDarkTheme } from '@/composables/useTheme.js';
 
+const words = ["Frontend Developer", "Freelancer"];
 const jobTitle = ref("");
 
 let wordIndex = 0, letterIndex = 0, isDeleting = false, animateCaret = false;
@@ -33,13 +34,25 @@ onMounted(typeEffect);
 
 <template>
     <div>
-        I'M <span class="text-secondary text-xl sm:text-4xl md:text-5xl"> Magdi Khaled</span>
-        <br>
-        Software Engineer
-        <p class="relative w-fit inline-block sm:block">
-            <span class=" inline-block sm:hidden">|</span>
+        <div class="flex gap-2 items-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl my-4">
+            <span class="font-bold whitespace-nowrap"> Magdi Khaled</span>
+            <img src="@/assets/media/icons/hello-icon.svg" alt="hi-icon">
+        </div>
+        <h3 class="flex items-center gap-4 text-lg sm:text-xl font-bold">
+            <span class="w-[2em] sm:w-[4em] border-b-[2px] border-b-gray-400 rounded-full inline-block"></span>
+            Software Engineer
+        </h3>
+        <p class="relative w-full sm:w-[85%] md:w-[85%] lg:w-[65%] inline-block sm:block py-2 text-[16px]"
+            :class="{ 'text-muted': !isDarkTheme }">
+            Web Developer based in Giza, driven by
+            passion and creativity to build seamless digital
+            experiences.
+            <br>
+        </p>
+        <p class="font-bold block">
             {{ jobTitle }}
-            <span class="h-[10em] border-l-[3px] border-l-secondary" :class="{ 'caret': animateCaret }"></span>
+            <span class="h-[10em] border-l-[2px]"
+                :class="{ 'caret': animateCaret, 'border-l-gray-200': isDarkTheme }"></span>
         </p>
     </div>
 </template>

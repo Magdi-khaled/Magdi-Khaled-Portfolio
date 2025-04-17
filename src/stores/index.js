@@ -1,11 +1,11 @@
 import { defineStore } from 'pinia';
 import axios from 'axios';
-export const useContactStore = defineStore('Contact', {
+
+export const useContactStore = defineStore('contact', {
     state: () => ({
         name: '',
         email: '',
         message: '',
-        subject: '',
         status: null,
         loading: false,
     }),
@@ -13,10 +13,9 @@ export const useContactStore = defineStore('Contact', {
         async sendEmail() {
             this.loading = true;
             try {
-                const response = await axios.post('https://tender-organized-goldenrod.glitch.me/api/send-email', {
+                const response = await axios.post('https://busy-dust-square.glitch.me/api/send-email', {
                     name: this.name,
                     email: this.email,
-                    subject: this.subject,
                     message: this.message,
                 });
                 setTimeout(() => { this.loading = false; }, 2000);
@@ -33,7 +32,7 @@ export const useContactStore = defineStore('Contact', {
     },
     getters: {
         getFormData() {
-            return this.name && this.email && this.subject && this.message;
+            return this.name && this.email && this.message;
         }
     }
 });
