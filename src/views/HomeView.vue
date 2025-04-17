@@ -111,7 +111,7 @@ watch(projectChoice, (newChoice) => {
             <Social class="order-0 w-1/12" />
             <div class="order-2 md:order-1 relative w-full md:w-6/12 flex flex-wrap items-center">
                 <Preview class="w-full py-4 md:py-8 h-fit" />
-                <BaseButton class="my-2" aria-role="link" @click="toContact">
+                <BaseButton class="my-2" @click="toContact">
                     say hello
                     <CoSend />
                 </BaseButton>
@@ -130,14 +130,16 @@ watch(projectChoice, (newChoice) => {
         <!-- about -->
         <section data-aos="fade-up" class="about py-8">
             <h1 class="text-2xl sm:text-4xl capitalize font-bold text-center">about me</h1>
-            <p class="text-center text-muted py-2 text-sm">My introduction</p>
+            <p class="text-center py-2 text-sm" :class="{ 'text-secondary': !isDarkTheme }">My introduction
+            </p>
             <About />
         </section>
         <div id="skills" class="mb-3 md:mb-10"></div>
         <!-- skills -->
         <section data-aos="fade-up" class="py-8">
             <h1 class="text-2xl sm:text-4xl capitalize font-bold text-center">skills</h1>
-            <p class="text-center text-muted py-2 text-sm">My technical level</p>
+            <p class="text-center py-2 text-sm" :class="{ 'text-secondary': !isDarkTheme }">My technical
+                level</p>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6 mx-0 xl:mx-10">
                 <div class="w-[320px] sm:w-[370px] m-auto my-0 p-8 border-[1px] rounded-3xl"
                     :class="{ 'bg-hovered border-bg-color': isDarkTheme, 'bg-white border-gray-300': !isDarkTheme }">
@@ -165,7 +167,7 @@ watch(projectChoice, (newChoice) => {
         <!-- experience -->
         <section data-aos="fade-up" class="py-8">
             <h1 class="text-2xl sm:text-4xl capitalize font-bold text-center">experience</h1>
-            <p class="text-center text-muted py-2 text-sm">My personel journey</p>
+            <p class="text-center py-2 text-sm" :class="{ 'text-secondary': !isDarkTheme }">My personel journey</p>
             <ExpHeader v-model:expChoice="expChoice" />
             <template v-if="expChoice === 'edu'">
                 <div v-for="(item, index) in educations" :key="index"
@@ -197,7 +199,8 @@ watch(projectChoice, (newChoice) => {
         <!-- projects -->
         <section data-aos="fade-up" class="py-8">
             <h1 class="text-2xl sm:text-4xl capitalize font-bold text-center">projects</h1>
-            <p class="text-center text-muted py-2 text-sm">My personel projects</p>
+            <p class="text-center py-2 text-sm" :class="{ 'text-secondary': !isDarkTheme }">My personel
+                projects</p>
             <ProjectHeader v-model:projectChoice="projectChoice" />
             <div
                 class="px-2 xl:px-4 grid [grid-template-columns:repeat(auto-fit,minmax(260px,1fr))] gap-6 justify-center my-6">
@@ -208,7 +211,7 @@ watch(projectChoice, (newChoice) => {
         <!-- contact -->
         <section data-aos="fade-up" class="py-8">
             <h1 class="text-2xl sm:text-4xl capitalize font-bold text-center">Get in touch</h1>
-            <p class="text-center text-muted py-2 text-sm">contact me </p>
+            <p class="text-center py-2 text-sm" :class="{ 'text-secondary': !isDarkTheme }">contact me </p>
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-4 sm:gap-12 mx-0 lg:mx-16">
                 <Contact />
                 <div class="w-full items-center">

@@ -32,14 +32,14 @@ const goto = (item) => {
             <button v-for="item in links" @click="goto(item)" :title="item.title" class="size-8 sm:size-10 capitalize flex justify-center items-center
                 text-lg sm:text-xl rounded-md cursor-pointer transition-colors duration-300" :class="{
                     'bg-primary text-body-color hover:bg-dark-hovered': !isDarkTheme,
-                    'bg-body-color text-dark-hovered border-dark-hovered hover:text-muted hover:bg-dark-hovered': isDarkTheme,
+                    'bg-body-color text-dark-hovered border-dark-hovered hover:text-secondary hover:bg-dark-hovered': isDarkTheme,
                 }">
                 <CdGithubAlt v-if="item.title === 'GitHub'" />
                 <UnLinkedinAlt v-if="item.title === 'Linked In'" />
                 <BsInstagram v-if="item.title === 'Instagram'" />
             </button>
         </div>
-        <p class="text-xs sm:text-md py-6 mb-12" :class="{ 'text-muted': !isDarkTheme }">
+        <p class="text-xs sm:text-md py-6 mb-12" :class="{ 'text-secondary': !isDarkTheme }">
             Copyright © Magdi 2025 </p>
     </footer>
 </template>

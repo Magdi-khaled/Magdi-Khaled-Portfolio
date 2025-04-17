@@ -29,13 +29,13 @@ const hovered = ref(null);
             <p v-for="(item, index) in project.hashtags" :key="index"> #{{ item }}</p>
         </div>
         <div class="flex items-center gap-3 text-sm capitalize">
-            <div aria-role="link" @click="" v-if="project.isDeployed"
+            <div @click="" v-if="project.isDeployed"
                 class="border-[1px] rounded-xl hover:translate-x-1 transition-transform duration-300">
                 <a :href="project.src" target="_blank" class="py-1 px-2 block w-full h-full">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
                 </a>
             </div>
-            <div aria-role="link" class="border-[1px] rounded-xl hover:translate-x-1 transition-transform duration-300">
+            <div class="border-[1px] rounded-xl hover:translate-x-1 transition-transform duration-300">
                 <a :href="project.src_code" target="_blank" class="py-1 px-2 block w-full h-full">
                     <i class="fa-brands fa-github"></i> Code
                 </a>

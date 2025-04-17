@@ -52,12 +52,13 @@ onUnmounted(() => {
                 </NavItem>
             </ul>
             <button @click="changeTheme" class="cursor-pointer text-2xl">
-                <MdOutlinedDarkMode v-if="!isDarkTheme" />
-                <CaLight v-else />
+                <MdOutlinedDarkMode aria-label="Toggle theme" v-if="!isDarkTheme" />
+                <CaLight aria-label="Toggle theme" v-else />
             </button>
 
             <div class="md:hidden text-end pt-4 pb-2">
-                <button @click="toggleNavigation = !toggleNavigation" class="md:hidden cursor-pointer text-xl">
+                <button aria-label="Open navigation menu" @click="toggleNavigation = !toggleNavigation"
+                    class="md:hidden cursor-pointer text-xl">
                     <AkGrid />
                 </button>
             </div>

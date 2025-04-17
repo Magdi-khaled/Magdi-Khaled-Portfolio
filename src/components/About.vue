@@ -23,27 +23,32 @@ const downloadResume = () => {
                 <div class="col-span-1 flex flex-col items-center gap-1 border-[1px] rounded-xl py-4 px-3"
                     :class="{ 'bg-white border-gray-200': !isDarkTheme, 'bg-hovered border-bg-color': isDarkTheme }">
                     <CoEducation class="text-2xl" />
-                    <h4 class="capitalize text-sm">education</h4>
-                    <p class="text-[10px] text-muted font-medium">Computer Science</p>
+                    <h1 class="capitalize text-sm">education</h1>
+                    <p class="text-[10px] font-medium" :class="{ 'text-secondary': !isDarkTheme }">
+                        Computer Science</p>
                 </div>
                 <div class="col-span-1 flex flex-col items-center gap-1 border-[1px] rounded-xl py-4 px-3"
                     :class="{ 'bg-white border-gray-200': !isDarkTheme, 'bg-hovered border-bg-color': isDarkTheme }">
                     <BxBriefcase class="text-2xl" />
-                    <h4 class="capitalize text-sm">projects</h4>
-                    <p class="text-[10px] text-muted font-medium">15+ Projects</p>
+                    <h1 class="capitalize text-sm">projects</h1>
+                    <p class="text-[10px] font-medium" :class="{ 'text-secondary': !isDarkTheme }">15+
+                        Projects</p>
                 </div>
                 <div class="col-span-1 flex flex-col items-center gap-1 border-[1px] rounded-xl py-4 px-3"
                     :class="{ 'bg-white border-gray-200': !isDarkTheme, 'bg-hovered border-bg-color': isDarkTheme }">
                     <BxSupport class="text-2xl" />
-                    <h4 class="capitalize text-sm">opportunities</h4>
-                    <p class="text-[10px] text-muted font-medium">Open to Work</p>
+                    <h1 class="capitalize text-sm">opportunities</h1>
+                    <p class="text-[10px] font-medium" :class="{ 'text-secondary': !isDarkTheme }">Open
+                        to Work</p>
                 </div>
             </div>
-            <p class="my-4 text-md w-full xl-w-11/12" :class="{ 'text-secondary': !isDarkTheme }">
+            <p class=" my-4 text-md w-full xl-w-11/12" :class="{ 'text-secondary': !isDarkTheme }">
                 Recent graduate with a Bachelor's degree in Computer Science, with two years of experience as a
-                Front-end developer, turning ideas into seamless, interactive web experiences. I blend design and code
+                Front-end developer, turning ideas into seamless, interactive web experiences. I blend design
+                and code
                 to
-                craft user-friendly interfaces that not only look great but feel intuitive. Passionate about creating
+                craft user-friendly interfaces that not only look great but feel intuitive. Passionate about
+                creating
                 smooth, engaging digital journeys.
             </p>
             <BaseButton aria-role="link" @click="downloadResume" class="w-fit">

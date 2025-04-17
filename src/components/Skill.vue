@@ -40,7 +40,7 @@ const iconMap = {
         <component v-else-if="iconMap[skill.label]" :is="iconMap[skill.label]" class="mt-1" />
 
         <div>
-            <h4 class="capitalize font-semibold">{{ skill.label }}</h4>
+            <h1 class="capitalize font-semibold">{{ skill.label }}</h1>
             <p class="capitalize text-[10px] text-muted">{{ skill.proficiency }}</p>
         </div>
     </div>

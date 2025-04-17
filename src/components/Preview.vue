@@ -43,7 +43,7 @@ onMounted(typeEffect);
             Software Engineer
         </h3>
         <p class="relative w-full sm:w-[85%] md:w-[85%] lg:w-[65%] inline-block sm:block py-2 text-[16px]"
-            :class="{ 'text-muted': !isDarkTheme }">
+            :class="{ 'text-secondary': !isDarkTheme }">
             Web Developer based in Giza, driven by
             passion and creativity to build seamless digital
             experiences.
