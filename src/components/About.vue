@@ -51,7 +51,7 @@ const downloadResume = () => {
                 creating
                 smooth, engaging digital journeys.
             </p>
-            <BaseButton aria-role="link" @click="downloadResume" class="w-fit">
+            <BaseButton @click="downloadResume" class="w-fit">
                 download CV
                 <img src="@/assets/media/icons/resume.svg" class="size-5 bg-white rounded-lg shadow-md" alt="">
             </BaseButton>

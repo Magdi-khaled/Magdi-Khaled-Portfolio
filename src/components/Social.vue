@@ -17,14 +17,16 @@ const links = ref([
 <template>
     <div class="flex flex-col items-start gap-3 text-2xl">
         <span data-aos="fade-down" class="w-[1.5px] h-[2rem] bg-bg-color ml-3 rounded-full"></span>
-        <ul data-aos="fade-right" class="flex flex-col gap-3">
-            <a v-for="link in links" :key="link" :href="link.value" target="_blank" :title="link?.title">
-                <UnLinkedinAlt v-if="link.title === 'Linked In'" />
-                <CdGithubAlt v-else-if="link.title === 'GitHub'" />
-                <SiCodeforces v-else-if="link.title === 'Codeforces'" />
-                <PhWhatsappLogo v-else-if="link.title === 'Whatsapp'" />
-                <PhLightInstagramLogo v-else-if="link.title === 'Instagram'" />
-            </a>
+        <ul data-aos="fade-right" class="flex flex-col gap-2">
+            <li v-for="link in links" :key="link">
+                <a :href="link.value" target="_blank" :title="link?.title" class="block w-full h-full">
+                    <UnLinkedinAlt v-if="link.title === 'Linked In'" />
+                    <CdGithubAlt v-else-if="link.title === 'GitHub'" />
+                    <SiCodeforces v-else-if="link.title === 'Codeforces'" />
+                    <PhWhatsappLogo v-else-if="link.title === 'Whatsapp'" />
+                    <PhLightInstagramLogo v-else-if="link.title === 'Instagram'" />
+                </a>
+            </li>
         </ul>
     </div>
 </template>
