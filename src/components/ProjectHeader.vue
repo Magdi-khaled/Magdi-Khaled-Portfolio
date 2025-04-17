@@ -2,7 +2,7 @@
 import { isDarkTheme } from '@/composables/useTheme.js';
 
 const projectChoice = defineModel('projectChoice');
-const headings = ['all', 'HTML & CSS', 'vue', 'nodeJS', 'fullstack'];
+const headings = ['all', 'HTML', 'vue', 'nodeJS', 'fullstack'];
 
 </script>
 <template>
@@ -14,7 +14,7 @@ const headings = ['all', 'HTML & CSS', 'vue', 'nodeJS', 'fullstack'];
                 'bg-dark-hovered text-body-color': projectChoice === item && !isDarkTheme,
                 'border-[2px] bg-hovered text-body-color': projectChoice === item && isDarkTheme,
             }">
-            {{ item }}
+            {{ item === 'HTML' ? 'HTML & CSS' : item }}
         </button>
     </div>
 </template>

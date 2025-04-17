@@ -17,7 +17,8 @@ export const projects = [
         src_code: 'https://github.com/YoussefTarek80/Graduation_Project_2024',
         image: darbImage,
         hashtags: ['vue', 'vuex', 'tailwind', 'axios', 'php', 'Laravel', 'ML', 'phpMyAdmin'],
-        isDeployed: false
+        isDeployed: false,
+        category: ['fullstack', 'vue']
     },
     {
         name: 'E-commerce website',
@@ -27,7 +28,8 @@ export const projects = [
         src_code: 'https://github.com/Magdi-khaled/E-commerce-Ystore',
         image: ystoreImage,
         hashtags: ['vue', 'vuex', 'tailwind', 'node', 'express', 'mongodb'],
-        isDeployed: true
+        isDeployed: true,
+        category: ['fullstack', 'vue', 'node']
     },
     {
         name: 'Task Management',
@@ -37,7 +39,8 @@ export const projects = [
         src_code: 'https://github.com/Magdi-khaled/Task-Management-System',
         image: tsImage,
         hashtags: ['vue', 'pinia', 'tailwind', 'veevalidate '],
-        isDeployed: true
+        isDeployed: true,
+        category: ['vue']
     },
     {
         name: 'E-Scooter',
@@ -48,7 +51,8 @@ export const projects = [
         src_code: 'https://github.com/Magdi-khaled/E-Scooter',
         image: escooterImage,
         hashtags: ['HTML', 'CSS', 'JavaScript', 'bootstrap'],
-        isDeployed: true
+        isDeployed: true,
+        category: ['html', 'css', 'js']
     },
     {
         name: 'Course Management - BE API',
@@ -59,7 +63,8 @@ export const projects = [
         src_code: 'https://github.com/Magdi-khaled/Your-Course',
         image: ycourseImage,
         hashtags: ['node', 'express', 'JWT', 'mongodb', 'postman', 'vue', 'vuex', 'axios'],
-        isDeployed: false
+        isDeployed: false,
+        category: ['node']
     },
     {
         name: 'Portfolio Website',
@@ -69,7 +74,8 @@ export const projects = [
         src_code: 'https://github.com/Magdi-khaled/Portfolio-SGT',
         image: PortfolioSGTImage,
         hashtags: ['HTML', 'CSS', 'JavaScript'],
-        isDeployed: true
+        isDeployed: true,
+        category: ['html', 'css', 'js']
     },
     {
         name: 'CRUD System',
@@ -80,7 +86,8 @@ export const projects = [
         src_code: 'https://github.com/Magdi-khaled/CRUD-SYSTEM',
         image: crudImage,
         hashtags: ['HTML', 'CSS', 'JavaScript'],
-        isDeployed: true
+        isDeployed: true,
+        category: ['html', 'css', 'js']
     },
     {
         name: 'Payment System (Fawry)',
@@ -90,6 +97,7 @@ export const projects = [
         src_code: 'https://github.com/YoussefTarek80/FawryPay-Project',
         image: paymentImage,
         hashtags: ['java', 'spring_Boot', 'postman', 'design_patterns'],
-        isDeployed: false
+        isDeployed: false,
+        category: ['all']
     },
 ]

@@ -15,7 +15,7 @@ import Contact from '@/components/Contact.vue';
 import BaseTeleport from '@/components/Teleport.vue';
 import GoTop from '@/components/GoTop.vue';
 
-import { ref, toRef } from "vue";
+import { computed, ref, toRef, watch } from "vue";
 import { projects } from '@/composables/projects';
 import { frontend, backendAndTools, progLangs } from '@/composables/skills.js';
 import { experiences, educations } from '@/composables/qualifications';
@@ -47,6 +47,7 @@ const email = toRef(contactStore, 'email');
 const message = toRef(contactStore, 'message');
 const status = toRef(contactStore, 'status');
 const loading = toRef(contactStore, 'loading');
+const filteredProjects = ref([...projects]);
 
 const sendMessage = handleSubmit(async () => {
     try {
@@ -76,6 +77,20 @@ const toContact = () => {
     const el = document.getElementById('contact');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
 };
+
+
+watch(projectChoice, (newChoice) => {
+    if (newChoice === 'all') filteredProjects.value = [...projects];
+    else if (newChoice === 'HTML & CSS')
+        filteredProjects.value = projects.filter((project) =>
+            project.category.includes('html') || project.category.includes('css'));
+    else if (newChoice === 'nodeJS')
+        filteredProjects.value = projects.filter((project) =>
+            project.category.includes('node'));
+    else
+        filteredProjects.value = projects.filter((project) =>
+            project.category.includes(newChoice.toLowerCase()));
+});
 </script>
 
 <template>
@@ -186,7 +201,7 @@ const toContact = () => {
             <ProjectHeader v-model:projectChoice="projectChoice" />
             <div
                 class="px-2 xl:px-4 grid [grid-template-columns:repeat(auto-fit,minmax(260px,1fr))] gap-6 justify-center my-6">
-                <Project v-for="item in projects" :project="item" />
+                <Project v-for="item in filteredProjects" :project="item" />
             </div>
         </section>
         <div id="contact" class="mb-3 md:mb-10"></div>
