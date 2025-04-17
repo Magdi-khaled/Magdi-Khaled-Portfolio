@@ -15,8 +15,8 @@ const downloadResume = () => {
 <template>
     <div class="mt-8 flex flex-col lg:flex-row gap-4 justify-between xl:justify-center items-center">
         <div class="w-full sm:w-1/2 flex justify-center">
-            <img class="hidden sm:block rounded-3xl w-[15em] lg:w-[20em] h-[17rem] lg:h-[21em]" loading="lazy"
-                src="@/assets/media/personal-image.webp" alt="graduate-img">
+            <img class="hidden sm:block rounded-3xl grayscale-[0.25] w-[15em] lg:w-[20em] h-[17rem] lg:h-[22em]"
+                loading="lazy" src="@/assets/media/personal-image.webp" alt="graduate-img">
         </div>
         <div class="w-full sm:w-10/12 md:w-8/12 lg:w-6/12 flex flex-col gap-4">
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 w-full font-bold">
