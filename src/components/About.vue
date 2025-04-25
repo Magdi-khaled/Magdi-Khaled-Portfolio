@@ -2,7 +2,7 @@
 import { CoEducation } from '@kalimahapps/vue-icons/co';
 import { BxBriefcase, BxSupport } from '@kalimahapps/vue-icons/bx';
 import BaseButton from '@/components/BaseButton.vue';
-import Resume from '@/assets/media/myResume.pdf';
+import Resume from '@/assets/media/Magdi\'s-Resume.pdf';
 import { isDarkTheme } from '@/composables/useTheme';
 
 const downloadResume = () => {
