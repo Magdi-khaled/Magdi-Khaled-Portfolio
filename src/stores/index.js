@@ -20,11 +20,9 @@ export const useContactStore = defineStore('contact', {
                 });
                 setTimeout(() => { this.loading = false; }, 2000);
                 this.status = 'success';
-                console.log(response.data.message);
             } catch (error) {
                 setTimeout(() => { this.loading = false; }, 2000);
                 this.status = 'error';
-                console.error('Error sending email:', error);
             } finally {
                 this.loading = false;
             }
