@@ -52,7 +52,6 @@ const filteredProjects = ref([...projects]);
 const sendMessage = handleSubmit(async () => {
     try {
         if (contactStore.getFormData) {
-            console.log('send');
             await contactStore.sendEmail();
             if (status.value === 'success') {
                 resetForm();
