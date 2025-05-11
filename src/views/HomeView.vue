@@ -77,7 +77,6 @@ const toContact = () => {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
 };
 
-
 watch(projectChoice, (newChoice) => {
     if (newChoice === 'all') filteredProjects.value = [...projects];
     else if (newChoice === 'HTML & CSS')
@@ -208,7 +207,7 @@ watch(projectChoice, (newChoice) => {
         </section>
         <div id="contact" class="mb-3 md:mb-10"></div>
         <!-- contact -->
-        <section data-aos="fade-up" class="py-8">
+        <section class="py-8">
             <h1 class="text-2xl sm:text-4xl capitalize font-bold text-center">Get in touch</h1>
             <p class="text-center py-2 text-sm" :class="{ 'text-secondary': !isDarkTheme }">contact me </p>
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-4 sm:gap-12 mx-0 lg:mx-16">

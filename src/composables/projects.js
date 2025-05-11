@@ -1,6 +1,7 @@
 
 import darbImage from '@/assets/media/projects/darb.webp';
 import ystoreImage from '@/assets/media/projects/ystore.webp';
+import dashboardImage from '@/assets/media/projects/dashboard.webp';
 import escooterImage from '@/assets/media/projects/escooter.webp';
 import tsImage from '@/assets/media/projects/ts-management.webp';
 import ycourseImage from '@/assets/media/projects/ycourse.webp';
@@ -9,7 +10,29 @@ import crudImage from '@/assets/media/projects/cruds-system.webp';
 import paymentImage from '@/assets/media/projects/fawry.webp';
 
 export const projects = [
+
     {
+        name: 'E-commerce website',
+        desc: `A dynamic e-commerce platform built with VueJS, featuring product listings, 
+            a shopping cart, and user, admin authentication, styled with Tailwind.`,
+        src: 'https://ystore-fashion.netlify.app',
+        src_code: 'https://github.com/Magdi-khaled/E-commerce-Ystore',
+        image: ystoreImage,
+        hashtags: ['vue', 'vuex', 'tailwind', 'node', 'express', 'mongodb'],
+        isDeployed: true,
+        category: ['fullstack', 'vue', 'node']
+    },
+    {
+        name: 'Interactive E-commerce Dashboard',
+        desc: `An intuitive and interactive seller dashboard built with NuxtJS for e-commerce platforms, empowering vendors to manage sales, 
+        track orders, monitor performance metrics, and gain valuable insights in real-time.`,
+        src: 'https://nuxt-interactive-dashboard.netlify.app',
+        src_code: 'https://github.com/Magdi-khaled/Nuxt-Dashboard-ShadCN',
+        image: dashboardImage,
+        hashtags: ['nuxtJS', 'pinia', 'tailwind'],
+        isDeployed: true,
+        category: ['fullstack', 'vue', 'node']
+    }, {
         name: 'darb system',
         desc: `Education Management System facilitates communication between the administration,
                 many schools under its jurisdiction and students' parents.`,
@@ -19,17 +42,6 @@ export const projects = [
         hashtags: ['vue', 'vuex', 'tailwind', 'axios', 'php', 'Laravel', 'ML', 'phpMyAdmin'],
         isDeployed: false,
         category: ['fullstack', 'vue']
-    },
-    {
-        name: 'E-commerce website',
-        desc: `A dynamic e-commerce platform built with Vue.js, featuring product listings, 
-            a shopping cart, and user, admin authentication, styled with Tailwind.`,
-        src: 'https://ystore-fashion.netlify.app',
-        src_code: 'https://github.com/Magdi-khaled/E-commerce-Ystore',
-        image: ystoreImage,
-        hashtags: ['vue', 'vuex', 'tailwind', 'node', 'express', 'mongodb'],
-        isDeployed: true,
-        category: ['fullstack', 'vue', 'node']
     },
     {
         name: 'Task Management',
