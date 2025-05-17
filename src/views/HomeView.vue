@@ -93,11 +93,11 @@ watch(projectChoice, (newChoice) => {
 
 <template>
     <BaseTeleport :show="success" :state="true">
-        <i class="fa-solid fa-check-double pr-2"></i>
+        <i class="pr-2 fa-solid fa-check-double"></i>
         message sent and i will answer as soon as possible
     </BaseTeleport>
     <BaseTeleport :show="failed" :state="false">
-        <i class="fa-solid fa-circle-exclamation pr-2"></i>
+        <i class="pr-2 fa-solid fa-circle-exclamation"></i>
         error While sending message
     </BaseTeleport>
 
@@ -105,43 +105,43 @@ watch(projectChoice, (newChoice) => {
 
     <main class="my-2 mx-[5%] md:mx-[10%] lg:mx-[14%]">
         <section data-aos="fade-up"
-            class="flex flex-wrap justify-start md:justify-between gap-4 md:gap-0 items-center py-8 md:py-16">
-            <Social class="order-0 w-1/12" />
-            <div class="order-2 md:order-1 relative w-full md:w-6/12 flex flex-wrap items-center">
+            class="flex flex-wrap items-center justify-start gap-4 py-8 md:justify-between md:gap-0 md:py-16">
+            <Social class="w-1/12 order-0" />
+            <div class="relative flex flex-wrap items-center order-2 w-full md:order-1 md:w-6/12">
                 <Preview class="w-full py-4 md:py-8 h-fit" />
                 <BaseButton class="my-2" @click="toContact">
                     say hello
                     <CoSend />
                 </BaseButton>
             </div>
-            <div class="order-1 md:order-2 w-7/12 md:w-5/12 flex justify-end">
+            <div class="flex justify-end order-1 w-7/12 md:order-2 md:w-5/12">
                 <img width="150px" height="150px" src="@/assets/media/personal-image.webp" alt="personal-img"
                     class="bg-gray-200 w-[15em] md:w-[16rem] lg:w-[18rem] grayscale-[0.25] image-animate"
                     loading="eager" fetchpriority="high">
             </div>
         </section>
         <span id="about"></span>
-        <a href="#about" class="w-fit hidden md:flex gap-2 items-center capitalize font-bold cursor-pointer my-8">
+        <a href="#about" class="items-center hidden gap-2 my-8 font-bold capitalize cursor-pointer w-fit md:flex">
             <BsMouse class="text-2xl" />
             <p>scroll down <i class="fa-solid fa-arrow-down"></i></p>
         </a>
         <!-- about -->
-        <section data-aos="fade-up" class="about py-8">
-            <h1 class="text-2xl sm:text-4xl capitalize font-bold text-center">about me</h1>
-            <p class="text-center py-2 text-sm" :class="{ 'text-secondary': !isDarkTheme }">My introduction
+        <section data-aos="fade-up" class="py-8 about">
+            <h1 class="text-2xl font-bold text-center capitalize sm:text-4xl">about me</h1>
+            <p class="py-2 text-sm text-center" :class="{ 'text-secondary': !isDarkTheme }">My introduction
             </p>
             <About />
         </section>
         <div id="skills" class="mb-3 md:mb-10"></div>
         <!-- skills -->
         <section data-aos="fade-up" class="py-8">
-            <h1 class="text-2xl sm:text-4xl capitalize font-bold text-center">skills</h1>
-            <p class="text-center py-2 text-sm" :class="{ 'text-secondary': !isDarkTheme }">My technical
+            <h1 class="text-2xl font-bold text-center capitalize sm:text-4xl">skills</h1>
+            <p class="py-2 text-sm text-center" :class="{ 'text-secondary': !isDarkTheme }">My technical
                 level</p>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6 mx-0 xl:mx-10">
+            <div class="grid grid-cols-1 gap-4 mx-0 mt-6 lg:grid-cols-2 xl:mx-10">
                 <div class="w-[320px] sm:w-[370px] m-auto my-0 p-8 border-[1px] rounded-3xl"
                     :class="{ 'bg-hovered border-bg-color': isDarkTheme, 'bg-white border-gray-300': !isDarkTheme }">
-                    <h1 class="capitalize font-bold text-center mb-4">frontend development
+                    <h1 class="mb-4 font-bold text-center capitalize">frontend development
                     </h1>
                     <!-- :class="{ 'text-hovered': isDarkTheme }" -->
                     <div class="grid grid-cols-2 gap-6">
@@ -150,11 +150,11 @@ watch(projectChoice, (newChoice) => {
                 </div>
                 <div class="w-[320px] sm:w-[370px] m-auto my-0 p-8 border-[1px] rounded-3xl"
                     :class="{ 'bg-hovered border-bg-color': isDarkTheme, 'bg-white border-gray-300': !isDarkTheme }">
-                    <h1 class="capitalize font-bold text-center mb-4">backend & tools</h1>
+                    <h1 class="mb-4 font-bold text-center capitalize">backend & tools</h1>
                     <div class="grid grid-cols-2 gap-6 mb-4">
                         <Skill v-for="(item, index) in backendAndTools" :key="index" :skill="item" />
                     </div>
-                    <h1 class="capitalize font-bold text-center mb-4">programming languages</h1>
+                    <h1 class="mb-4 font-bold text-center capitalize">programming languages</h1>
                     <div class="grid grid-cols-2 gap-6">
                         <Skill v-for="(item, index) in progLangs" :key="index" :skill="item" />
                     </div>
@@ -164,8 +164,8 @@ watch(projectChoice, (newChoice) => {
         <div id="experience" class="mb-3 md:mb-10"></div>
         <!-- experience -->
         <section data-aos="fade-up" class="py-8">
-            <h1 class="text-2xl sm:text-4xl capitalize font-bold text-center">experience</h1>
-            <p class="text-center py-2 text-sm" :class="{ 'text-secondary': !isDarkTheme }">My personel journey</p>
+            <h1 class="text-2xl font-bold text-center capitalize sm:text-4xl">experience</h1>
+            <p class="py-2 text-sm text-center" :class="{ 'text-secondary': !isDarkTheme }">My personel journey</p>
             <ExpHeader v-model:expChoice="expChoice" />
             <template v-if="expChoice === 'edu'">
                 <div v-for="(item, index) in educations" :key="index"
@@ -196,8 +196,8 @@ watch(projectChoice, (newChoice) => {
         <div id="projects" class="mb-3 md:mb-10"></div>
         <!-- projects -->
         <section data-aos="fade-up" class="py-8">
-            <h1 class="text-2xl sm:text-4xl capitalize font-bold text-center">projects</h1>
-            <p class="text-center py-2 text-sm" :class="{ 'text-secondary': !isDarkTheme }">My personel
+            <h1 class="text-2xl font-bold text-center capitalize sm:text-4xl">projects</h1>
+            <p class="py-2 text-sm text-center" :class="{ 'text-secondary': !isDarkTheme }">My personel
                 projects</p>
             <ProjectHeader v-model:projectChoice="projectChoice" />
             <div
@@ -208,13 +208,13 @@ watch(projectChoice, (newChoice) => {
         <div id="contact" class="mb-3 md:mb-10"></div>
         <!-- contact -->
         <section class="py-8">
-            <h1 class="text-2xl sm:text-4xl capitalize font-bold text-center">Get in touch</h1>
-            <p class="text-center py-2 text-sm" :class="{ 'text-secondary': !isDarkTheme }">contact me </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-4 sm:gap-12 mx-0 lg:mx-16">
+            <h1 class="text-2xl font-bold text-center capitalize sm:text-4xl">Get in touch</h1>
+            <p class="py-2 text-sm text-center" :class="{ 'text-secondary': !isDarkTheme }">contact me </p>
+            <div class="grid items-center grid-cols-1 gap-4 mx-0 md:grid-cols-2 sm:gap-12 lg:mx-16">
                 <Contact />
-                <div class="w-full items-center">
-                    <h2 class="text-lg my-6 capitalize font-bold text-center">Let's connect </h2>
-                    <form @submit.prevent="sendMessage" class="grid grid-cols-1 items-center gap-2 sm:gap-4">
+                <div class="items-center w-full">
+                    <h2 class="my-6 text-lg font-bold text-center capitalize">Let's connect </h2>
+                    <form @submit.prevent="sendMessage" class="grid items-center grid-cols-1 gap-2 sm:gap-4">
                         <Field label="name" name="name" v-model="name" type="text" placeholder="Type your name" />
                         <Field label="email" name="email" v-model="email" type="email" placeholder="Type your email" />
                         <Field label="message" name="message" v-model="message" type="textarea"

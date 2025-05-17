@@ -4,20 +4,20 @@ export const experiences = [
         title: 'Freelancer Frontend Developer',
         location: '',
         company: 'Freelance Platforms',
-        date: 'Feb 2023 - Present',
-    },
-    {
-        title: 'Frontend Developer Intern',
-        company: 'RMS Company',
-        location: 'On Site',
-        date: 'Nov 2023 - Feb 2024',
+        date: 'May 2023 - Present',
     },
     {
         title: 'Web Developer Intern',
-        company: 'SGT',
+        company: 'RMS Company',
         location: 'Remote',
-        date: 'Jan 2023 - Mar 2023',
-    }
+        date: 'Nov 2023 - Feb 2024',
+    },
+    // {
+    //     title: 'Web Developer Intern',
+    //     company: 'SGT',
+    //     location: 'Remote',
+    //     date: 'Jan 2023 - Mar 2023',
+    // }
 ];
 
 export const educations = [
