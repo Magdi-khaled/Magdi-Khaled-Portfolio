@@ -7,7 +7,7 @@ import tsImage from '@/assets/media/projects/ts-management.webp';
 import ycourseImage from '@/assets/media/projects/ycourse.webp';
 import PortfolioSGTImage from '@/assets/media/projects/portfolio-sgt.webp';
 import crudImage from '@/assets/media/projects/cruds-system.webp';
-import paymentImage from '@/assets/media/projects/fawry.webp';
+import weatherImage from '@/assets/media/projects/net-weather.webp';
 
 export const projects = [
 
@@ -29,9 +29,19 @@ export const projects = [
         src: 'https://nuxt-interactive-dashboard.netlify.app',
         src_code: 'https://github.com/Magdi-khaled/Nuxt-Dashboard-ShadCN',
         image: dashboardImage,
-        hashtags: ['nuxtJS', 'pinia', 'tailwind'],
+        hashtags: ['nuxtJS', 'Typescript', 'pinia', 'tailwind'],
         isDeployed: true,
         category: ['fullstack', 'vue', 'node']
+    }, {
+        name: 'Net Weather App',
+        desc: `A weather application built with VueJS and WeatherAPI  providing real-time weather updates, forecasts, and location-based services.
+                Users can search for weather information by city or state.`,
+        src: 'https://net-weather.netlify.app/',
+        src_code: 'https://github.com/Magdi-khaled/Net-Weather',
+        image: weatherImage,
+        hashtags: ['Vue', 'Typescript', 'pinia', 'tailwind', 'MapBox_API', 'weather_API'],
+        isDeployed: true,
+        category: ['vue']
     }, {
         name: 'darb system',
         desc: `Education Management System facilitates communication between the administration,
@@ -50,7 +60,7 @@ export const projects = [
         src: 'https://task-management-ts.netlify.app',
         src_code: 'https://github.com/Magdi-khaled/Task-Management-System',
         image: tsImage,
-        hashtags: ['vue', 'pinia', 'tailwind', 'veevalidate '],
+        hashtags: ['vue', 'pinia', 'tailwind', 'vee_validate'],
         isDeployed: true,
         category: ['vue']
     },
@@ -100,16 +110,5 @@ export const projects = [
         hashtags: ['HTML', 'CSS', 'JavaScript'],
         isDeployed: true,
         category: ['html', 'css', 'js']
-    },
-    {
-        name: 'Payment System (Fawry)',
-        desc: `Each user can pay for any available service in the system, such as internet recharge or landline bill.
-                Payment with the user's wallet or credit card, and making discounts for users.`,
-        src: 'https://github.com/YoussefTarek80/FawryPay-Project',
-        src_code: 'https://github.com/YoussefTarek80/FawryPay-Project',
-        image: paymentImage,
-        hashtags: ['java', 'spring_Boot', 'postman', 'design_patterns'],
-        isDeployed: false,
-        category: ['all']
-    },
+    }
 ]
