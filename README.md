@@ -32,3 +32,7 @@ Welcome to my portfolio repository! 🚀 This space highlights my expertise, pro
 - Feel free to reach out if you'd like to collaborate!
 - Email: magdikhaled23s@gmail.com
 - LinkedIn: [Magdi Khaled | Linked In](https://www.linkedin.com/in/magdi-khaled-2b1b61206/)
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE) – © 2025 Magdi Khaled Kelany
