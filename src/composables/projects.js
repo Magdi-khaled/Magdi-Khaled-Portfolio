@@ -1,6 +1,7 @@
 
 import darbImage from '@/assets/media/projects/darb.webp';
 import ystoreImage from '@/assets/media/projects/ystore.webp';
+import ecommerceImage from '@/assets/media/projects/e-commerce-nuxt.webp';
 import dashboardImage from '@/assets/media/projects/dashboard.webp';
 import escooterImage from '@/assets/media/projects/escooter.webp';
 import tsImage from '@/assets/media/projects/ts-management.webp';
@@ -10,15 +11,14 @@ import crudImage from '@/assets/media/projects/cruds-system.webp';
 import weatherImage from '@/assets/media/projects/net-weather.webp';
 
 export const projects = [
-
     {
-        name: 'E-commerce website',
-        desc: `A dynamic e-commerce platform built with VueJS, featuring product listings, 
-            a shopping cart, and user, admin authentication, styled with Tailwind.`,
-        src: 'https://ystore-fashion.netlify.app',
-        src_code: 'https://github.com/Magdi-khaled/E-commerce-Ystore',
-        image: ystoreImage,
-        hashtags: ['vue', 'vuex', 'tailwind', 'node', 'express', 'mongodb'],
+        name: 'E-commerce website - Nuxt 3',
+        desc: `A dynamic e-commerce platform built with Nuxt 3, featuring product listings/filtering, 
+            a pretty shopping cart, checkout and user authentication, styled with Tailwind.`,
+        src: 'https://e-commerce-vr-xiv-qr.netlify.app',
+        src_code: 'https://github.com/Magdi-khaled/e-commerce-website-nuxt',
+        image: ecommerceImage,
+        hashtags: ['nuxtJS', 'vueuse', 'typescript', 'swiper', 'pinia', 'tailwind', 'IconifyVue'],
         isDeployed: true,
         category: ['fullstack', 'vue', 'node']
     },
@@ -29,7 +29,7 @@ export const projects = [
         src: 'https://nuxt-interactive-dashboard.netlify.app',
         src_code: 'https://github.com/Magdi-khaled/Nuxt-Dashboard-ShadCN',
         image: dashboardImage,
-        hashtags: ['nuxtJS', 'Typescript', 'pinia', 'tailwind'],
+        hashtags: ['nuxtJS', 'typescript', 'pinia', 'tailwind'],
         isDeployed: true,
         category: ['fullstack', 'vue', 'node']
     }, {
@@ -42,6 +42,16 @@ export const projects = [
         hashtags: ['Vue', 'Typescript', 'pinia', 'tailwind', 'MapBox_API', 'weather_API'],
         isDeployed: true,
         category: ['vue']
+    }, {
+        name: 'E-commerce website',
+        desc: `A dynamic e-commerce platform built with VueJS, featuring product listings, 
+            a shopping cart, and user, admin authentication, styled with Tailwind.`,
+        src: 'https://ystore-fashion.netlify.app',
+        src_code: 'https://github.com/Magdi-khaled/E-commerce-Ystore',
+        image: ystoreImage,
+        hashtags: ['vue', 'vuex', 'tailwind', 'node', 'express', 'mongodb'],
+        isDeployed: true,
+        category: ['fullstack', 'vue', 'node']
     }, {
         name: 'darb system',
         desc: `Education Management System facilitates communication between the administration,
