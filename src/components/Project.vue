@@ -18,7 +18,7 @@ const hovered = ref(null);
             }" @mouseover="hovered = project.name" @mouseleave="hovered = null">
         <img loading="lazy" class="w-full h-[10em] border-[1px] border-gray-300 rounded-2xl" :src="project.image"
             :alt="project.name">
-        <h2 class="capitalize whitespace-nowrap font-semibold my-2 text-sm tracking-wide"
+        <h2 class="capitalize max-w-full overflow-hidden whitespace-nowrap text-ellipsis font-semibold my-2 text-sm tracking-wide"
             :class="{ 'text-body-color': isDarkTheme, 'text-bg-color ': !isDarkTheme, }">
             {{ project.name }}</h2>
         <p class="text-start text-sm text-muted my-2"

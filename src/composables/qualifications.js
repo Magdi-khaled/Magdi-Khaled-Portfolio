@@ -1,10 +1,16 @@
 
 export const experiences = [
     {
+        title: 'Frontend Engineer',
+        company: 'HIGHBASE TRADING W.L.L',
+        location: 'Remote',
+        date: 'July 2023 - Present',
+    },
+    {
         title: 'Freelancer Frontend Developer',
         location: '',
         company: 'Freelance Platforms',
-        date: 'May 2023 - Present',
+        date: 'May 2023 - July 2025',
     },
     {
         title: 'Web Developer Intern',
@@ -12,12 +18,6 @@ export const experiences = [
         location: 'Remote',
         date: 'Nov 2023 - Feb 2024',
     },
-    // {
-    //     title: 'Web Developer Intern',
-    //     company: 'SGT',
-    //     location: 'Remote',
-    //     date: 'Jan 2023 - Mar 2023',
-    // }
 ];
 
 export const educations = [
