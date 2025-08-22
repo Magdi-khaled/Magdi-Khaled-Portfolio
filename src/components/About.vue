@@ -15,7 +15,7 @@ const downloadResume = () => {
 <template>
     <div class="mt-8 flex flex-col lg:flex-row gap-4 justify-between xl:justify-center items-center">
         <div class="w-full sm:w-1/2 flex justify-center">
-            <img class="hidden sm:block rounded-3xl border-[2px] border-neutral-400 grayscale-[0.25] w-[15em] lg:w-[18em] h-[16rem] lg:h-[20em]"
+            <img class="hidden sm:block rounded-4xl border-[1px] border-neutral-400 grayscale-[0.25] w-[15rem] lg:w-[18.25rem] h-[16rem] lg:h-[20em]"
                 loading="lazy" src="@/assets/media/personal-image.webp" alt="graduate-img">
         </div>
         <div class="w-full sm:w-10/12 md:w-8/12 lg:w-6/12 flex flex-col gap-4">
@@ -23,20 +23,25 @@ const downloadResume = () => {
                 <div class="col-span-1 flex flex-col items-center gap-1 border-[1px] rounded-xl py-4 px-3"
                     :class="{ 'bg-white border-gray-200': !isDarkTheme, 'bg-hovered border-bg-color': isDarkTheme }">
                     <CoEducation class="text-2xl" />
+
                     <h1 class="capitalize text-sm">education</h1>
                     <p class="text-[10px] font-medium" :class="{ 'text-secondary': !isDarkTheme }">
                         Computer Science</p>
                 </div>
+
                 <div class="col-span-1 flex flex-col items-center gap-1 border-[1px] rounded-xl py-4 px-3"
                     :class="{ 'bg-white border-gray-200': !isDarkTheme, 'bg-hovered border-bg-color': isDarkTheme }">
                     <BxBriefcase class="text-2xl" />
+
                     <h1 class="capitalize text-sm">projects</h1>
                     <p class="text-[10px] font-medium" :class="{ 'text-secondary': !isDarkTheme }">15+
                         Projects</p>
                 </div>
+
                 <div class="col-span-1 flex flex-col items-center gap-1 border-[1px] rounded-xl py-4 px-3"
                     :class="{ 'bg-white border-gray-200': !isDarkTheme, 'bg-hovered border-bg-color': isDarkTheme }">
                     <BxSupport class="text-2xl" />
+
                     <h1 class="capitalize text-sm">opportunities</h1>
                     <p class="text-[10px] font-medium" :class="{ 'text-secondary': !isDarkTheme }">Works at HIGHBASE</p>
                 </div>
