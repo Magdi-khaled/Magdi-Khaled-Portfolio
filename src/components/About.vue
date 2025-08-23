@@ -1,6 +1,7 @@
 <script setup>
 import { CoEducation } from '@kalimahapps/vue-icons/co';
 import { BxBriefcase, BxSupport } from '@kalimahapps/vue-icons/bx';
+import docIcon from '@/assets/media/icons/resume.svg';
 import BaseButton from '@/components/BaseButton.vue';
 import Resume from '@/assets/media/Magdi\'s-Resume.pdf';
 import { isDarkTheme } from '@/composables/useTheme';
@@ -55,7 +56,7 @@ const downloadResume = () => {
             </p>
             <BaseButton @click="downloadResume" class="w-fit">
                 download CV
-                <img src="@/assets/media/icons/resume.svg" class="size-5 bg-white rounded-lg shadow-md" alt="">
+                <docIcon class="size-6 bg-white rounded-lg shadow-md" />
             </BaseButton>
         </div>
     </div>

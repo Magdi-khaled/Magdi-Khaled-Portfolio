@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { isDarkTheme } from '@/composables/useTheme.js';
+import hiIcon from '@/assets/media/icons/hello-icon.svg';
 
 const words = ["Frontend Engineer", "Freelancer"];
 const jobTitle = ref("");
@@ -36,7 +37,8 @@ onMounted(typeEffect);
     <div>
         <div class="flex gap-2 items-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl my-4">
             <span class="font-bold whitespace-nowrap"> Magdi Khaled</span>
-            <img src="@/assets/media/icons/hello-icon.svg" alt="hi-icon">
+            <hiIcon />
+            <!-- <img src="@/assets/media/icons/hello-icon.svg"> -->
         </div>
         <h3 class="flex items-center gap-4 text-lg sm:text-xl font-bold">
             <span class="w-[2em] sm:w-[4em] border-b-[2px] border-b-gray-400 rounded-full inline-block"></span>
