@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { isDarkTheme } from '@/composables/useTheme.js';
 
-const words = ["Frontend Developer", "Freelancer"];
+const words = ["Frontend Engineer", "Freelancer"];
 const jobTitle = ref("");
 
 let wordIndex = 0, letterIndex = 0, isDeleting = false, animateCaret = false;
