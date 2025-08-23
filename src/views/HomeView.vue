@@ -15,10 +15,10 @@ import Contact from '@/components/Contact.vue';
 import BaseTeleport from '@/components/Teleport.vue';
 import GoTop from '@/components/GoTop.vue';
 
-import { computed, ref, toRef, watch } from "vue";
-import { projects } from '@/composables/projects';
-import { frontend, backendAndTools, progLangs } from '@/composables/skills.js';
-import { experiences, educations } from '@/composables/qualifications';
+import { ref, toRef, watch } from "vue";
+import projects from '@/extends/projects.json';
+import skills from '@/extends/skills.json';
+import qualifications from '@/extends/qualifications.json';
 import { isDarkTheme } from '@/composables/useTheme.js';
 
 import { useRouter } from 'vue-router';
@@ -47,6 +47,7 @@ const email = toRef(contactStore, 'email');
 const message = toRef(contactStore, 'message');
 const status = toRef(contactStore, 'status');
 const loading = toRef(contactStore, 'loading');
+
 const filteredProjects = ref([...projects]);
 
 const sendMessage = handleSubmit(async () => {
@@ -71,6 +72,7 @@ const sendMessage = handleSubmit(async () => {
         setTimeout(() => { failed.value = false; }, 2500);
     }
 });
+
 const toContact = () => {
     router.push({ path: '/', hash: '#contact' });
     const el = document.getElementById('contact');
@@ -96,6 +98,7 @@ watch(projectChoice, (newChoice) => {
         <i class="pr-2 fa-solid fa-check-double"></i>
         message sent and i will answer as soon as possible
     </BaseTeleport>
+
     <BaseTeleport :show="failed" :state="false">
         <i class="pr-2 fa-solid fa-circle-exclamation"></i>
         error While sending message
@@ -118,8 +121,8 @@ watch(projectChoice, (newChoice) => {
             </div>
             <div class="flex justify-end order-1 w-7/12 md:order-2 md:w-5/12">
                 <img width="150px" height="150px" src="@/assets/media/personal-image-prev.webp.jpg" alt="personal-img"
-                    class="bg-gray-200 w-[15em] md:w-[16rem] lg:w-[18rem] grayscale-[0.25] image-animate" loading="eager"
-                    fetchpriority="high">
+                    class="bg-gray-200 w-[15em] md:w-[16rem] lg:w-[18rem] grayscale-[0.25] image-animate"
+                    loading="eager" fetchpriority="high">
             </div>
         </section>
         <span id="about"></span>
@@ -140,33 +143,36 @@ watch(projectChoice, (newChoice) => {
             <h1 class="text-2xl font-bold text-center capitalize sm:text-4xl">skills</h1>
             <p class="py-2 text-sm text-center" :class="{ 'text-secondary': !isDarkTheme }">My technical
                 level</p>
+
             <div class="grid grid-cols-1 gap-4 mx-0 mt-6 lg:grid-cols-2 xl:mx-10">
-                <div class="w-[320px] sm:w-[370px] m-auto my-0 p-8 border-[1px] rounded-3xl"
+                <div class="w-[320px] sm:w-[370px] m-auto my-0 p-8 border-[1px] rounded-3xl hover:border-neutral-400 transition duration-150"
                     :class="{ 'bg-hovered border-bg-color': isDarkTheme, 'bg-white border-gray-300': !isDarkTheme }">
                     <h1 class="mb-4 font-bold text-center capitalize">
                         frontend development</h1>
 
                     <div class="grid grid-cols-2 gap-6">
-                        <Skill v-for="(item, index) in frontend" :key="index" :skill="item" />
+                        <Skill v-for="(item, index) in skills.frontend" :key="index" :skill="item" />
                     </div>
                 </div>
-                <div class="w-[320px] sm:w-[370px] m-auto my-0 p-8 border-[1px] rounded-3xl"
+
+                <div class="w-[320px] sm:w-[370px] m-auto my-0 p-8 border-[1px] rounded-3xl hover:border-neutral-400 transition duration-150"
                     :class="{ 'bg-hovered border-bg-color': isDarkTheme, 'bg-white border-gray-300': !isDarkTheme }">
                     <h1 class="mb-4 font-bold text-center capitalize">backend & tools</h1>
 
                     <div class="grid grid-cols-2 gap-6 mb-4">
-                        <Skill v-for="(item, index) in backendAndTools" :key="index" :skill="item" />
+                        <Skill v-for="(item, index) in skills.backendAndTools" :key="index" :skill="item" />
                     </div>
 
                     <h1 class="mb-4 font-bold text-center capitalize">programming languages</h1>
 
                     <div class="grid grid-cols-2 gap-6">
-                        <Skill v-for="(item, index) in progLangs" :key="index" :skill="item" />
+                        <Skill v-for="(item, index) in skills.progLangs" :key="index" :skill="item" />
                     </div>
                 </div>
             </div>
         </section>
-        <div id="experience" class="mb-3 md:mb-10"></div>
+
+        <div id="experience" class="mb-3 md:mb-10" />
         <!-- experience -->
         <section data-aos="fade-up" class="py-8">
             <h1 class="text-2xl font-bold text-center capitalize sm:text-4xl">experience</h1>
@@ -175,7 +181,7 @@ watch(projectChoice, (newChoice) => {
             <ExpHeader v-model:expChoice="expChoice" />
 
             <template v-if="expChoice === 'edu'">
-                <div v-for="(item, index) in educations" :key="index"
+                <div v-for="(item, index) in qualifications.educations" :key="index"
                     class="w-full grid grid-cols-[8.5rem_1.2rem_8.5rem] sm:grid-cols-[10rem_1.5rem_10rem] justify-center gap-4">
                     <Experience :experience="item" :order="index" />
                     <div class="order-1 justify-self-start w-2 h-full border-r-[2px] relative
@@ -184,12 +190,13 @@ watch(projectChoice, (newChoice) => {
                             'border-r-muted before:bg-muted': !isDarkTheme
                         }">
                     </div>
-                    <div :class="{ 'order-0': index % 2, 'order-2': !(index % 2) }"></div>
+
+                    <div :class="{ 'order-0': index % 2, 'order-2': !(index % 2) }" />
                 </div>
             </template>
 
             <template v-else>
-                <div v-for="(item, index) in experiences" :key="index"
+                <div v-for="(item, index) in qualifications.experiences" :key="index"
                     class="w-full grid grid-cols-[8.5rem_1.2rem_8.5rem] sm:grid-cols-[10rem_1.5rem_10rem] justify-center gap-4">
                     <Experience :experience="item" :order="index" />
 
@@ -212,7 +219,9 @@ watch(projectChoice, (newChoice) => {
             <h1 class="text-2xl font-bold text-center capitalize sm:text-4xl">projects</h1>
             <p class="py-2 text-sm text-center" :class="{ 'text-secondary': !isDarkTheme }">My personel
                 projects</p>
+
             <ProjectHeader v-model:projectChoice="projectChoice" />
+
             <div
                 class="px-2 xl:px-4 grid [grid-template-columns:repeat(auto-fit,minmax(260px,1fr))] gap-6 justify-center my-6">
                 <Project v-for="item in filteredProjects" :project="item" />
@@ -227,6 +236,7 @@ watch(projectChoice, (newChoice) => {
             <p class="py-2 text-sm text-center" :class="{ 'text-secondary': !isDarkTheme }">contact me </p>
             <div class="grid items-center grid-cols-1 gap-4 mx-0 md:grid-cols-2 sm:gap-12 lg:mx-16">
                 <Contact />
+
                 <div class="items-center w-full">
                     <h2 class="my-6 text-lg font-bold text-center capitalize">Let's connect </h2>
 
@@ -243,6 +253,7 @@ watch(projectChoice, (newChoice) => {
                                     send message
                                     <CoSend />
                                 </p>
+
                                 <p v-else class="relative size-6 before:rounded-full before:border-[3px] before:border-y-transparent 
                                 before:absolute before:size-6 before:inset-0 animate-spin">
                                 </p>

@@ -3,8 +3,8 @@ import { isDarkTheme } from '@/composables/useTheme.js';
 
 const projectChoice = defineModel('projectChoice');
 const headings = ['all', 'HTML', 'vue', 'nodeJS', 'fullstack'];
-
 </script>
+
 <template>
     <div class="flex flex-wrap items-center gap-2 sm:gap-4 justify-center my-4 text-[14px] sm:text-md">
         <button v-for="(item, index) in headings" :key="index" @click="projectChoice = item" class="px-3 p-[4px] whitespace-nowrap 
