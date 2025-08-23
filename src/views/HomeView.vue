@@ -184,6 +184,7 @@ watch(projectChoice, (newChoice) => {
                 <div v-for="(item, index) in qualifications.educations" :key="index"
                     class="w-full grid grid-cols-[8.5rem_1.2rem_8.5rem] sm:grid-cols-[10rem_1.5rem_10rem] justify-center gap-4">
                     <Experience :experience="item" :order="index" />
+                    
                     <div class="order-1 justify-self-start w-2 h-full border-r-[2px] relative
                         before:absolute before:size-3 before:rounded-full before:left-[1px]" :class="{
                             'before:top-4': index, 'border-r-body-color before:bg-body-color': isDarkTheme,
