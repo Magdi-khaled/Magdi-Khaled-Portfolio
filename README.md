@@ -4,7 +4,7 @@ A fully responsive portfolio website built with Vue.js, showcasing my projects, 
 
 🔗 https://magdi-khaled-portfolio.vercel.app
 
-<img src="./src/assets/media/git-preview-img.PNG" alt="Portfolio Preview Image">
+<img src="./src/assets/media/git-preview-img.JPG" alt="Portfolio Preview Image">
 
 <br/>
 
