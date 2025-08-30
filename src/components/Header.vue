@@ -35,9 +35,8 @@ onUnmounted(() => {
 
 <template>
     <span id="home"></span>
-    <header
-        class="w-full fixed md:sticky bottom-0 md:top-0 z-10 py-[0%] md:py-[1.2rem] px-[5%] md:px-[14%] flex items-center justify-around"
-        :class="{
+    <header class="max-w-[1920px] m-auto lg:px-[14%] w-full fixed md:sticky bottom-0 md:top-0 z-10
+         py-[0%] md:py-[1.2rem] px-[5%] md:px-[14%] flex items-center justify-around" :class="{
             'shadow-xs': isScrolled, 'shadow-top': screenWidth & isScrolled,
             'bg-body-color text-primary': !isDarkTheme,
             'bg-[var(--hovered)] text-body-color': isDarkTheme,

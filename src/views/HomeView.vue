@@ -106,7 +106,7 @@ watch(projectChoice, (newChoice) => {
 
     <Header />
 
-    <main class="my-2 mx-[5%] md:mx-[10%] lg:mx-[14%]">
+    <main class="max-w-[1920px] m-auto py-2 px-[5%] md:px-[10%] lg:px-[14%]">
         <section data-aos="fade-up"
             class="flex flex-wrap items-center justify-start gap-4 py-8 md:justify-between md:gap-0 md:py-16">
             <Social class="w-1/12 order-0" />
@@ -184,7 +184,7 @@ watch(projectChoice, (newChoice) => {
                 <div v-for="(item, index) in qualifications.educations" :key="index"
                     class="w-full grid grid-cols-[8.5rem_1.2rem_8.5rem] sm:grid-cols-[10rem_1.5rem_10rem] justify-center gap-4">
                     <Experience :experience="item" :order="index" />
-                    
+
                     <div class="order-1 justify-self-start w-2 h-full border-r-[2px] relative
                         before:absolute before:size-3 before:rounded-full before:left-[1px]" :class="{
                             'before:top-4': index, 'border-r-body-color before:bg-body-color': isDarkTheme,
