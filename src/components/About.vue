@@ -9,7 +9,7 @@ import { isDarkTheme } from '@/composables/useTheme';
 const downloadResume = () => {
     const link = document.createElement('a')
     link.href = Resume;
-    link.download = 'Magdi\'s Resume.pdf';
+    link.download = 'Magdy-Khaled-Frontend-Engineer.pdf';
     link.click();
 };
 </script>
