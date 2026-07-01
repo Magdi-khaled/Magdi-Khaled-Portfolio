@@ -3,13 +3,13 @@ import { CoEducation } from '@kalimahapps/vue-icons/co';
 import { BxBriefcase, BxSupport } from '@kalimahapps/vue-icons/bx';
 import docIcon from '@/assets/media/icons/resume.svg';
 import BaseButton from '@/components/BaseButton.vue';
-import Resume from '@/assets/media/Magdi\'s-Resume.pdf';
+import Resume from '@/assets/media/Magdy-Khaled-Frontend-Engineer.pdf';
 import { isDarkTheme } from '@/composables/useTheme';
 
 const downloadResume = () => {
     const link = document.createElement('a')
     link.href = Resume;
-    link.download = 'Magdy-Khaled-Frontend-Engineer.pdf';
+    link.download = 'Magdy-Khaled Frontend-Engineer.pdf';
     link.click();
 };
 </script>
